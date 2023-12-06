@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Bienvenue sur le site officiel de L'ACF2L !">
+		<meta name="description" content="Bienvenue sur le site officiel de L'ACF2L ! Rejoignez nous dans notre centre de formation aéraunotique de l'aéroclub de Frotey-lès-Lure. Nous proposons de former de futur pilote et instructeur ainsi que des baptème de l'air.">
 		<meta name="keywords" content="aéroclub, aviation, club, aéronotique, avion, ACF2L">
 		<meta name="author" content="Raphael CADETE, Hugo BAJOUE, Yanis WONG">
 		
@@ -13,7 +13,7 @@
 		<title>ACF2L - Aéroclub de Frotey-lès-Lure</title>
 
 		<!-- Google Fonts css-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;700&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap css -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -47,7 +47,7 @@
 
 	<body data-spy="scroll" data-target="#main-navbar" data-offset="71">
 
-		<!-- Tob Bar Section Start -->
+		<!-- Bottom Bar Section Start -->
 		<article class="bottom-bar">
 			<div class="container">
 				<div class="row">
@@ -71,26 +71,25 @@
 				</div>
 			</div>
 		</article>
-		<!-- Tob Bar Section End -->
+		<!-- Bottom Bar Section End -->
 		
 		<!-- Header Section Start -->
 		<header class="header">
 			<nav class="navbar navbar-expand-lg navbar-light" id="main-navbar">
-				<div class="container">
+				<div class="container-fluid">
 					<!-- Navbar Brand start -->
-					<a class="navbar-brand" href="#"><img src="images/logo.png" alt="" /></a>
+					<a class="navbar-brand col-md-3" href="#"><img class="logo" src="images/logo.png" alt="" /></a>
 					<!-- Navbar Brand end -->
 					
-					<ul class="navbar-nav ml-auto" id="main-menu">
-						<li class="nav-item"><a class="nav-link active" href="#home">Accueil</a></li>
-						<li class="nav-item"><a class="nav-link" href="#activities">Nos activites</a></li>
-						<li class="nav-item"><a class="nav-link" href="#courses">Categories d'ULM</a></li>
-						<li class="nav-item"><a class="nav-link" href="#about-us">les moyens pedagogiques</a></li>
-						<li class="nav-item"><a class="nav-link" href="#teachers">l'equipe</a></li>
-						<li class="nav-item"><a class="nav-link" href="#events">Evenements</a></li>
-						<li class="nav-item"><a class="nav-link" href="#review">Review</a></li>
-						<li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
-						<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+					<ul class="navbar-nav col-md-9" id="main-menu">
+						<li class="nav-item"><a class="nav-link active" href="#home">ACCUEIL</a></li>
+						<li class="nav-item"><a class="nav-link" href="#activities">ACTIVITÉS</a></li>
+						<li class="nav-item"><a class="nav-link" href="#courses">ULM</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about-us">MATERIEL</a></li>
+						<li class="nav-item"><a class="nav-link" href="#teachers">EQUIPE</a></li>
+						<li class="nav-item"><a class="nav-link" href="#events">EVENEMENTS</a></li>
+						<li class="nav-item"><a class="nav-link" href="#review">AVIS</a></li>
+						<li id="navContact" class="nav-item" ><a class="nav-link" href="#contact">CONTACT</a></li>
 					</ul>
 						
 					<div class="navbar-toggle"></div>
@@ -101,14 +100,22 @@
 		<!-- Header Section End -->
 		
 		<!-- Banner Slider Section starts -->
-		<div class="banner-slider" id="home">
-			<div class="container-fluid">
-				<div class="row no-gutters">
-					<div class="col-md-12">
+		<section class="container-fluid px-0" id="home">
+			<div id="opacity" class="col-md-12 px-0">
+				<article class="row no-gutters">
+					<div class="d-flex flex-column justify-content-center align-items-center bg-image">
+						<p class="titleACF2L">Aéro-Club</p>
+						<p class="titleACF2L">Frotey-Lès-Lures</p>
+						<div id="decouvrir">
+							<p>Découvrir</p>
+						</div>
+						<div id="goDown" class="d-flex justify-content-center align-items-center rounded-circle p-2">
+							<img src="images/arrow.png">
+						</div>
 					</div>
-				</div>
+				</article>
 			</div>
-		</div>
+		</section>
 
 		<div class="container-fluid px-0">
 			<div class="row no-gutters">
