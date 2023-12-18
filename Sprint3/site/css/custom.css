@@ -225,8 +225,9 @@ header .navbar-collapse.collapse{
 .navbar-toggle{
 	display: none;
 	position: absolute;
-	top: 26px;
-	right: 15px;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
 }
 
 .navbar-toggle .slicknav_btn{
@@ -253,7 +254,7 @@ header .navbar-collapse.collapse{
 }
 
 .slicknav_nav a{
-	color: #ff5722;
+	color: #fff;
 	text-transform: uppercase;
 }
 
@@ -273,7 +274,7 @@ header .navbar-collapse.collapse{
 #home article {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
 	padding: 135px 0px 30px 0px;
 }
 
@@ -283,6 +284,7 @@ header .navbar-collapse.collapse{
 }
 
 #home #decouvrir {
+	width: fit-content;
 	margin-top: 35px;
 	background-color: rgba(35, 35, 35, 0.8);
 	padding: 7px 60px;
@@ -526,12 +528,29 @@ header .navbar-collapse.collapse{
 /**************************************/
 
 .our-activities{
-	padding: 100px 0;
 	position: relative;
+}
+
+.our-activities > div > article {
+	padding: 75px 75px;
+	color: white;
+}
+
+.our-activities > div > article > h2 {
+	margin: 0;
+	font-weight: 100;
+	margin-bottom: 30px;
 }
 
 .our-activities #textContainer {
 	background-color: #3874CB;
+}
+
+.our-activities #plane {
+	min-height: 400px;
+	background-image: url("../images/planeActivité.jpg");
+	background-size: cover;
+	background-position: center center;
 }
 
 .section-title{
@@ -1394,6 +1413,18 @@ footer.footer{
 	.header .navbar-nav{
 		display: none;
 	}
+
+	.header .container-fluid{
+		flex-direction: column;
+	}
+
+	#main-navbar {
+		background-color: #1976d2;
+	}
+
+	.header .container-fluid .navbar-brand{
+		align-self: start;
+	}
 	
 	.header .navbar{
 		align-items: flex-start;
@@ -1439,6 +1470,20 @@ footer.footer{
 
 @media only screen and (max-width: 767px){
 	
+	#meteoContainer {
+		margin-top: 20px;
+		transform: translateY(0);
+	}
+
+	#home article {
+		align-items: center;
+		text-align: center;
+	}
+
+	#home #decouvrir {
+		align-self: center;
+	}
+
 	.titleACF2L {
 		font-size: 40px;
 	}
