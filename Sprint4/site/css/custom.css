@@ -658,58 +658,35 @@ header .navbar-collapse.collapse{
 /*****    About us area css     *****/
 /************************************/
 
-.about-us{
+.about-us {
 	padding: 100px 0;
+	background-color: #3874CB;
+}
+
+.about-us .about-title {
+	padding: 20px 0px;
 	position: relative;
+	color: white;
 }
 
-.about-us:after{
-	content: '';
-	display: block;
+.about-us .about-title h2 {
+	font-weight: 100;
+	font-size: 50px;
+}
+
+.about-us .about-title p {
+	font-weight: 100px;
+	font-size: 20px;
+}
+
+.about-us .about-title::before {
+	content:"";
 	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -16px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	z-index: 1;
-}
-
-.about-content{
-	margin-bottom: 30px;
-}
-
-.about-content h3{
-	font-family: 'Bubblegum Sans', cursive;	
-	font-size: 28px;
-	font-weight: 400;
-	color: #333;
-	margin-bottom: 0.6em;
-}
-
-.about-content p{
-	color: #707070;
-	line-height: 1.7em;
-	margin-bottom: 1.7em;
-}
-
-.about-social-links a{
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	background: #ff5722;
-	box-shadow: 0 0 0 4px rgba(255,87,34,0.5);
-	color: #fff;
-	line-height: 30px;
-	text-align: center;
-	border-radius: 50%;
-	margin: 4px 20px 4px 0;
-	transition: all 0.3s;
-}
-
-.about-social-links a:hover{
-	background: #1976d2;
-	box-shadow: 0 0 0 4px rgba(25,118,209,0.5);
+	top: 0px;
+	left: -50px;
+	width: 65px;
+	background-color: white;
+	height: 100%;
 }
 
 /************************************/
