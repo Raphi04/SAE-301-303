@@ -7,3 +7,8 @@ document.addEventListener("scroll", (event) => {
         header.style.backgroundColor = "transparent";
     }
 });
+
+function decouverte() {
+    let activities = document.getElementById("activities");
+    activities.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest" });
+}

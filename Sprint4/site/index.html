@@ -47,11 +47,29 @@
 
 	<body data-spy="scroll" data-target="#main-navbar" data-offset="71">
 
+		<!-- Cookie Start -->
+		<article id="cookieContainer" class="container-fluid d-flex flex-column align-items-start">
+			<h2>COOKIES</h2>
+			<p>Autorisez vous la collecte données à des fins commerciales lors de votre navigation sur notre site </p>
+			<div class="d-flex align-items-center justify-content-start">
+				<div onClick="setCookie('cookie', 'accepted', '7')" class="cookieButton" id="cookieAccepter">Accepter</div>
+				<div onClick="cookiePopUpClose()" class="cookieButton" id="cookieRefuser">Refuser</div>
+			</div>
+		</article>
+		<!-- Cookie End -->
+
+		<!-- Loader Start-->
+		<section id="loader" class="loader container-fluid d-flex flex-column justify-content-center align-items-center">
+			<img id="imageLoading" src="images/logo.png">
+			<img id="loading" src="images/loading.gif">
+		</section>
+		<!-- Loader End-->
+
 		<!-- Bottom Bar Section Start -->
 		<article class="bottom-bar">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2">
+					<div class="col-md-4">
 						<div class="header-social-link">
 							<a href="#"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-twitter"></i></a>
@@ -60,7 +78,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-10 text-right">
+					<div class="col-md-8 text-right">
 						<div class="school-info">
 							<ul>
 								<li><a href="#"><i class="fa fa-envelope"></i> acf2l@gmail.com</a></li>
@@ -106,7 +124,7 @@
 					<p class="titleACF2L">Aéro-Club</p>
 					<p class="titleACF2L">Frotey-Lès-Lures</p>
 					<p class="description">Bienvenue dans ACL2F, l’association vous offre la chance <br> de pratiquer l’aviation légère dans un environnement exceptionnel. <br>Venez piloter nos ULM.</p>
-					<div id="decouvrir">
+					<div id="decouvrir" onClick="decouverte()">
 						<p>Découvrir</p>
 					</div>
 					<div class="col-md-12 d-flex justify-content-end" id="meteoContainer">
@@ -117,99 +135,101 @@
 		</section>
 		
 		<!-- Activities Section Starts -->
-
 		<section class="our-activities d-flex container-fluid p-0" id="activities">
-			<div class="row no-gutters">
-			<article class="col-md-7 d-flex flex-column justify-content-center align-items-start" id="textContainer">
-				<h2 class="align-self-center">Activités</h2>
-				<p>L’aéro-club est une Association Loi 1901, agréée Jeunesse et Sports , adhérente à la FFULM (Fédération Française d’ULM). Association enregistrée n°04674 - - Agrément n° AS70986858 Le siège social demeure 62, Avenue de la République, 70200 Lure</p>
-				<p>L’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</p>
-				<p>Pour cela, il assure les prestations complémentaires suivantes :</p>
-				<ul>
-					<li>maintenance des ULM moteur, structure…</li>
-					<li>montage des ULM et de tout instrument de navigation : Compas, radio, transpondeur…</li>
-					<li>un service de restauration rapide.</li>
-					<li>un hébergement en proposant trois studios et six chambres pour les élèves stagiaires.</li>
-					<li>location d’emplacement ULM dans des hangars pour les particuliers.</li>
-				</ul>
-			</article>
-			<article class="col-md-5" id="plane"></article>
-		</div>
-		</section>
-		
-		<section class="our-activities" id="activities">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<!-- Section title start -->
-						<div class="section-title wow fadeInUp">
-							<h2 class="color-orange">Nos activités </h2>
-							<p>L’aéro-club est une Association Loi 1901, agréée Jeunesse et Sports , adhérente à la FFULM  ( Fédération Française d’ULM).<br> Association enregistrée n°04674 - - Agrément n° AS70986858
-	Le siège social demeure  62, Avenue de la République, 70200 Lure</p><br>
-	<h6>l’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</h6>
-	<p>Pour cela, il assure les prestations complémentaires suivantes :
-	<ul>
-	<li>maintenance des ULM moteur, structure… </li>
-		<li> montage des ULM et de tout instrument de navigation : Compas, radio, transpondeur…</li>
-		<li>un service de restauration rapide.</li>
-		<li>un hébergement en proposant trois studios et six chambres pour les élèves stagiaires.</li>
-	<li>location d’emplacement ULM dans des hangars pour les particuliers. </li>
-	</ul>
-	
+			<div class="row no-gutters w-100">
+				<article class="col-md-7 d-flex flex-column justify-content-center align-items-start" id="textContainer">
+					<h2 class="align-self-center">Activités</h2>
+					<p>L’aéro-club est une Association Loi 1901, agréée Jeunesse et Sports , adhérente à la FFULM (Fédération Française d’ULM). Association enregistrée n°04674 - - Agrément n° AS70986858 Le siège social demeure 62, Avenue de la République, 70200 Lure</p>
+					<p>L’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</p>
+					<p>Pour cela, il assure les prestations complémentaires suivantes :</p>
+					<ul>
+						<li>maintenance des ULM moteur, structure…</li>
+						<li>montage des ULM et de tout instrument de navigation : Compas, radio, transpondeur…</li>
+						<li>un service de restauration rapide.</li>
+						<li>un hébergement en proposant trois studios et six chambres pour les élèves stagiaires.</li>
+						<li>location d’emplacement ULM dans des hangars pour les particuliers.</li>
+					</ul>
+					<div class="w-100 d-flex justify-content-md-around align-items-center">
+						<div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+							<img class="rounded-circle" src="images/course-1.jpg" alt="">
+							<p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
-						<!-- Section title end -->
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-md-4">
-						<!-- Activities Single Start -->
-						<div class="activities-single wow fadeInUp" data-wow-delay="0.3s">
-							<div class="icon-box icon-blue">
-								<i class="flaticon-fork"></i>
-							</div>
-							
-							<h3>Best Quality Food</h3>
-							<p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam.</p>
-							<a href="#" class="learn-more">Learn More</a>
+						<div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+							<img class="rounded-circle" src="images/course-1.jpg" alt="">
+							<p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
-						<!-- Activities Single End -->
-					</div>
-					
-					<div class="col-md-4">
-						<!-- Activities Single Start -->
-						<div class="activities-single wow fadeInUp" data-wow-delay="0.6s">
-							<div class="icon-box icon-orange">
-								<i class="flaticon-clock"></i>
-							</div>
-							
-							<h3>Music Lesson</h3>
-							<p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam.</p>
-							<a href="#" class="learn-more">Learn More</a>
+						<div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+							<img class="rounded-circle" src="images/course-1.jpg" alt="">
+							<p class="text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
-						<!-- Activities Single End -->
 					</div>
-					
-					<div class="col-md-4">
-						<!-- Activities Single Start -->
-						<div class="activities-single wow fadeInUp" data-wow-delay="0.6s">
-							<div class="icon-box icon-green">
-								<i class="flaticon-calendar"></i>
-							</div>
-							
-							<h3>Bus Service</h3>
-							<p>Lorem ipsum dolor sit amet, consec adipiscing elit. Pellentesque tincidunt rutrum sapien, sed ultricies diam.</p>
-							<a href="#" class="learn-more">Learn More</a>
-						</div>
-						<!-- Activities Single End -->
-					</div>
-				</div>
+				</article>
+				<article class="col-md-5" id="plane"></article>
 			</div>
 		</section>
 		<!-- Activities Section Ends -->
 		
 		<!-- Our Courses Section Starts -->
-		<section class="courses" id="courses">
+		<section class="courses container-fluid" id="courses">
+			<div class="row no-gutters w-100">
+				<h2 class=" col-md-12 text-center">Nos Véhicules</h2>
+				<div class=" col-md-12 d-flex justify-content-md-around align-items-center">
+					<article class="vehicule d-flex flex-column align-items-center p-0">
+						<div class="vehicule-image w-100"></div>
+						<div class="col-md-12 p-0">
+							<div class="col-md-6 d-flex justify-content-center align-items-center vehicule-name">
+								<p>Paramoteur</p>
+							</div>
+							<div class="col-md-12 vehicule-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ante in pulvinar efficitur. Aenean sit amet felis quam. Phasellus tincidunt nec augue posuere pharetra.</p>
+							</div>
+							<hr>
+							<div class="col-md-12 d-flex justify-content-end align-items-center">
+								<p class="price">79.99€</p>
+							</div>
+						</div>
+					</article>
+					<article class="vehicule d-flex flex-column align-items-center p-0">
+						<div class="vehicule-image w-100"></div>
+						<div class="col-md-12 p-0">
+							<div class="col-md-6 d-flex justify-content-center align-items-center vehicule-name">
+								<p>Paramoteur</p>
+							</div>
+							<div class="col-md-12 vehicule-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ante in pulvinar efficitur. Aenean sit amet felis quam. Phasellus tincidunt nec augue posuere pharetra.</p>
+							</div>
+							<hr>
+							<div class="col-md-12 d-flex justify-content-end align-items-center">
+								<p class="price">79.99€</p>
+							</div>
+						</div>
+					</article>
+					<article class="vehicule d-flex flex-column align-items-center p-0">
+						<div class="vehicule-image w-100"></div>
+						<div class="col-md-12 p-0">
+							<div class="col-md-6 d-flex justify-content-center align-items-center vehicule-name">
+								<p>Paramoteur</p>
+							</div>
+							<div class="col-md-12 vehicule-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum ante in pulvinar efficitur. Aenean sit amet felis quam. Phasellus tincidunt nec augue posuere pharetra.</p>
+							</div>
+							<hr>
+							<div class="col-md-12 d-flex justify-content-end align-items-center">
+								<p class="price">79.99€</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+		<section class="coures" id="courses">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -778,5 +798,7 @@
 		<!-- Main Custom js file -->
 		<script src="js/function.js"></script>
 		<script src="js/header.js"></script>
+		<script src="js/loading.js"></script>
+		<script src="js/cookie.js"></script>
 	</body>
 </html>
