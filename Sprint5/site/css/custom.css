@@ -549,23 +549,46 @@ header .navbar-collapse.collapse{
 	position: relative;
 }
 
+.our-activities .our-activities-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.our-activities .our-activities-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.our-activities .our-activities-title p {
+	font-weight: 500px;
+	font-size: 24px;
+}
+
+.our-activities .our-activities-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
 .our-activities > div > article {
 	padding: 0px 75px;
 	color: white;
 }
 
-.our-activities > div > article > h2 {
-	margin: 0;
-	font-weight: 100;
-	margin-bottom: 30px;
-	font-size: 50px;
-}
-
 .our-activities > div > article > p {
+	margin-left: 50px;
 	font-size: 20px;
 }
 
 .our-activities > div > article > ul {
+	margin-left: 60px;
 	font-size: 20px;
 }
 
@@ -584,7 +607,7 @@ header .navbar-collapse.collapse{
 
 .our-activities #textContainer {
 	background-color: #3874CB;
-	padding: 50px 75px;
+	padding: 50px 100px;
 }
 
 .our-activities #plane {
@@ -601,17 +624,38 @@ header .navbar-collapse.collapse{
 .courses{
 	background-image: url("../images/coursesBackground.png");
 	background-size: cover;
-	padding: 100px 0;
+	padding: 100px 100px;
 }
 
-.courses > div > h2 {
-	margin-bottom: 75px;
-	font-size: 50px;
-	font-weight: 100;
+.courses .courses-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
 	color: white;
 }
 
+.courses .courses-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.courses .courses-title p {
+	font-weight: 500px;
+	font-size: 24px;
+}
+
+.courses .courses-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
 .vehicule {
+	margin-top: 70px;
 	background-color: white;
 	border-radius: 20px;
 	width: 22%;
@@ -659,34 +703,64 @@ header .navbar-collapse.collapse{
 /************************************/
 
 .about-us {
-	padding: 100px 0;
+	padding: 150px 100px;
 	background-color: #3874CB;
 }
 
 .about-us .about-title {
-	padding: 20px 0px;
+	padding: 20px 0px 20px 50px;
 	position: relative;
 	color: white;
 }
 
 .about-us .about-title h2 {
-	font-weight: 100;
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
 	font-size: 50px;
 }
 
 .about-us .about-title p {
-	font-weight: 100px;
-	font-size: 20px;
+	font-weight: 500px;
+	font-size: 24px;
 }
 
 .about-us .about-title::before {
 	content:"";
 	position: absolute;
 	top: 0px;
-	left: -50px;
-	width: 65px;
+	left: -20px;
+	width: 20px;
 	background-color: white;
 	height: 100%;
+}
+
+.about-us .about-text {
+	padding-left: 50px;
+	margin-top: 100px;
+	color: white;
+	font-size: 20px;
+}
+
+.about-us .about-text ul{
+	padding-left: 20px;
+}
+
+.about-us .planeMontgolfiere {
+	position: relative;
+}
+
+.about-us .planeMontgolfiere img {
+	width: 60%;
+}
+
+.about-us #about-avion {
+	position:absolute;
+	top: 100px;
+	left: 62px;
+}
+
+.about-us #about-paramoteur {
+	border-radius: 100%;
 }
 
 /************************************/
@@ -694,90 +768,129 @@ header .navbar-collapse.collapse{
 /************************************/
 
 .faculty{
-	padding: 100px 0;
-	background: #ecf5fe;
+	padding: 150px 100px;
+	background-image: url("../images/ciel.jpg");
+	background-size: cover;
+}
+
+.faculty .faculty-title {
+	padding: 20px 0px 20px 50px;
+	margin-bottom: 50px;
 	position: relative;
+	color: white;
 }
 
-.faculty:after{
-	content: '';
-	display: block;
+.faculty .faculty-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.faculty .faculty-title p {
+	font-weight: 500px;
+	font-size: 24px;
+}
+
+.faculty .faculty-title::before {
+	content:"";
 	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0px;
-	height: 16px;
-	background: url(../images/wave-bg3.png) repeat-x;
-	transform: rotate(180deg);
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
 }
 
-.faculty-single{
-	text-align: center;
-	background: #fff;
-	padding: 40px 30px;
-	border-radius: 10px;
-	margin-bottom: 30px;
+.faculty .members {
+	margin-top: 50px;
+	padding: 25px 0px;
+	border-radius: 30px;
+	width: 23%;
+	background-color: white;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	transition: transform 0.3s;
 }
 
-.faculty-single figure{
-	display: inline-block;
-	max-width: 160px;
-	border-radius: 50%;
-	overflow: hidden;
-	border: 8px solid rgba(0,0,0,0.06);
+.faculty .members.memberHovered {
+	background-color: #3874CB;
+	transform: scale(1.05);
 }
 
-.faculty-single h3{
-	display: inline-block;
-	letter-spacing: 0.04em;
-	font-size: 18px;
+.faculty .members .circle {
+	width: 150px;
+	height: 150px;
+	border: 2px solid #3874CB;
+	border-radius: 100%;
+}
+
+.faculty .members .circle.memberHovered{
+	border: 2px solid white;
+}
+
+.faculty .members .circle img {
+	width: 100%;
+	border-radius: 100%;
+}
+
+.faculty .members .members-name {
+	color: #3874CB;
+	font-weight: 600;
+	font-size: 25px;
+	margin: 50px 0px 5px 0px; 
+}
+
+.faculty .members .members-name.memberHovered {
+	color: white;
+}
+
+.faculty .members .members-role {
+	color: #3874CB;
 	font-weight: 500;
-	position: relative;
-	color: #fff;
-	padding: 8px 20px;
-	z-index: 1;
-}
-
-.faculty-single h3:before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	transform: skewX(30deg);
-}
-
-.faculty-single h3:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	transform: skewX(-30deg);
-}
-
-.faculty-single p{
+	font-size: 20px;
 	margin: 0;
-	color: #333;
 }
 
-.faculty-orange h3:before,
-.faculty-orange h3:after{
-	background: #ff5722;
+.faculty .members .members-role.memberHovered {
+	color: white;
 }
 
-.faculty-blue h3:before,
-.faculty-blue h3:after{
-	background: #1976d2;
+.faculty .members hr {
+	width: 45%;
+	margin: 10px 0px 20px 0px;
+	border: 2px solid #3874CB;
+	border-radius: 50px;
 }
 
-.faculty-green h3:before,
-.faculty-green h3:after{
-	background: #a4cf27;
+.faculty .members hr.memberHovered {
+	border-color: white;
+}
+
+.faculty .members .members-phone {
+	color: #73A9ED;
+	font-weight: 600;
+	font-size: 25px;
+	margin: 0;
+}
+
+.faculty .members .members-phone.memberHovered {
+	color: white;
+}
+
+.faculty .members .members-socialLink {
+	margin-top: 50px;
+}
+
+.faculty .members .members-socialLink img {
+	width: 50px;
+}
+
+.faculty .members .members-socialLink a {
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+
+.faculty .members .members-socialLink a:hover {
+	transform: scale(1.1);
 }
 
 /**********************************/

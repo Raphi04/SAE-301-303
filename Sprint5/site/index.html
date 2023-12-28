@@ -138,7 +138,10 @@
 		<section class="our-activities d-flex container-fluid p-0" id="activities">
 			<div class="row no-gutters w-100">
 				<article class="col-md-7 d-flex flex-column justify-content-center align-items-start" id="textContainer">
-					<h2 class="align-self-center">Activités</h2>
+					<div class="our-activities-title">
+						<h2>Activités</h2>
+						<p>Retrouvez ici tout de ce que  nous proposons à ACF2L</p>
+					</div>
 					<p>L’aéro-club est une Association Loi 1901, agréée Jeunesse et Sports , adhérente à la FFULM (Fédération Française d’ULM). Association enregistrée n°04674 - - Agrément n° AS70986858 Le siège social demeure 62, Avenue de la République, 70200 Lure</p>
 					<p>L’aéro-club assure la formation de pilotes et d’instructeurs. Et propose également des baptêmes de l’air.</p>
 					<p>Pour cela, il assure les prestations complémentaires suivantes :</p>
@@ -172,7 +175,10 @@
 		<!-- Our Courses Section Starts -->
 		<section class="courses container-fluid" id="courses">
 			<div class="row no-gutters w-100">
-				<h2 class=" col-md-12 text-center">Nos Véhicules</h2>
+				<div class="courses-title">
+					<h2>Nos Véhicules</h2>
+					<p>Voici les différents véhicule mis à votre disposition</p>
+				</div>				
 				<div class=" col-md-12 d-flex justify-content-md-around align-items-center">
 					<article class="vehicule d-flex flex-column align-items-center p-0">
 						<div class="vehicule-image w-100"></div>
@@ -226,9 +232,9 @@
 		
 		<!-- About us Section Starts -->
 		<section class="about-us" id="about-us">
-			<div class="container">
-				<div class="row no-gutters">
-					<article class="col-md-6 about-us-content d-flex flex-column justify-content-center align-items-start">
+			<div class="container-fluid">
+				<div class="row">
+					<article class=" p-0 col-md-6 about-us-content d-flex flex-column justify-content-center align-items-start">
 						<div class="about-title">
 							<h2>Nos Moyens Pédagogiques</h2>
 							<p>Un aérodrome privé avec la possibilité d'un hébergement dans un environnement exceptionnel</p>
@@ -247,8 +253,9 @@
 							</ul>
 						</div>
 					</article>
-					<article class="col-md-6  planeMontgolfiere d-flex justify-content-center align-items-center">
-						<img src="">
+					<article class="col-md-6  planeMontgolfiere d-flex flex-column justify-content-center align-items-center">
+						<img id="about-avion" src="images/avionD.png">
+						<img id="about-paramoteur" src="images/paramoteur.jpg">
 					</article>
 				</div>
 			</div>
@@ -257,82 +264,74 @@
 		
 		<!-- Faculty Section starts -->
 		<section class="faculty" id="teachers">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-12">
-						<!-- Section title start -->
-						<div class="section-title">
-							<h2 class="color-orange">Notre équipe</h2>
-							<p>Les personnes qui vont vous accueillir à notre aéroclub</p>
-						</div>
-						<!-- Section title end -->
+					<div class="faculty-title">
+						<h2>Notre Équipe</h2>
+						<p>Les personnes qui vont vous accueillir à notre aéroclub</p>
 					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-lg-3 col-md-6">
-						<!-- Faculty Single Start -->
-						<div class="faculty-single faculty-orange wow fadeInUp" data-wow-delay="0.3s">
-							<figure>
-								<img src="images/team-1.PNG" />
-							</figure>
-							
-							<div class="faculty-info">
-								<h3>Kevin SAITOUT</h3>
-								<p>chef pilote</p>
+					<div class="col-md-12 d-flex justify-content-md-around align-items-center">
+						<article id="member1" class="members d-flex flex-column align-items-center" onMouseOver="changeColor('member1')" onMouseOut="changeColor('member1')">
+							<div class="circle">
+								<img src="images/memberG.png">
 							</div>
-						</div>
-						<!-- Faculty Single End -->
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<!-- Faculty Single Start -->
-						<div class="faculty-single faculty-blue wow fadeInUp" data-wow-delay="0.6s">
-							<figure>
-								<img src="images/team-2.PNG" />
-							</figure>
-							
-							<div class="faculty-info">
-								<h3>Céline LAPLUME</h3>
-								<p>secrétaire</p>
+							<h3 class="members-name">Kevin SAITOUT</h3>
+							<p class="members-role">Chef Pilote</p>
+							<hr>
+							<p class="members-phone"> + 88 52 56 45 63</p>
+							<div class="members-socialLink d-flex justify-content-center align-items-center">
+								<a class="mailLogo" href="mailto:example@gmail.com" target="_blank"><img src="images/Letter.png"></a>
+								<a class="facebookLogo" href="https://facebook.com" target="_blank"><img src="images/Facebook.png"></a>
+								<a class="linkedinLogo" href="https://linkedin.com" target="_blank"><img src="images/LinkedIn.png"></a>
 							</div>
-						</div>
-						<!-- Faculty Single End -->
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<!-- Faculty Single Start -->
-						<div class="faculty-single faculty-green wow fadeInUp" data-wow-delay="0.9s">
-							<figure>
-								<img src="images/team-3.PNG" />
-							</figure>
-							
-							<div class="faculty-info">
-								<h3>Justine VOLAVU</h3>
-								<p>pilote ULM - instructrice</p>
+						</article>
+						<article id="member2" class="members d-flex flex-column align-items-center"  onMouseOver="changeColor('member2')" onMouseOut="changeColor('member2')">
+							<div class="circle">
+								<img src="images/memberG.png">
 							</div>
-						</div>
-						<!-- Faculty Single End -->
-					</div>
-					
-					<div class="col-lg-3 col-md-6">
-						<!-- Faculty Single Start -->
-						<div class="faculty-single faculty-orange wow fadeInUp" data-wow-delay="1.2s">
-							<figure>
-								<img src="images/team-4.PNG" />
-							</figure>
-							
-							<div class="faculty-info">
-								<h3>Alain STRUMENT</h3>
-								<p>pilote ULM - instructeur</p>
+							<h3 class="members-name">Céline LAPLUME</h3>
+							<p class="members-role">Secrétaire</p>
+							<hr>
+							<p class="members-phone"> + 88 24 78 14 96</p>
+							<div class="members-socialLink d-flex justify-content-center align-items-center">
+								<a class="mailLogo" href="mailto:example@gmail.com" target="_blank"><img src="images/Letter.png"></a>
+								<a class="facebookLogo" href="https://facebook.com" target="_blank"><img src="images/Facebook.png"></a>
+								<a class="linkedinLogo" href="https://linkedin.com" target="_blank"><img src="images/LinkedIn.png"></a>
 							</div>
-						</div>
-						<!-- Faculty Single End -->
+						</article>
+						<article id="member3" class="members d-flex flex-column align-items-center"  onMouseOver="changeColor('member3')" onMouseOut="changeColor('member3')">
+							<div class="circle">
+								<img src="images/memberG.png">
+							</div>
+							<h3 class="members-name">Justine VOLAVU</h3>
+							<p class="members-role">Pilote ULM - Instructice</p>
+							<hr>
+							<p class="members-phone"> + 88 78 57 25 67</p>
+							<div class="members-socialLink d-flex justify-content-center align-items-center">
+								<a class="mailLogo" href="mailto:example@gmail.com" target="_blank"><img src="images/Letter.png"></a>
+								<a class="facebookLogo" href="https://facebook.com" target="_blank"><img src="images/Facebook.png"></a>
+								<a class="linkedinLogo" href="https://linkedin.com" target="_blank"><img src="images/LinkedIn.png"></a>
+							</div>
+						</article>
+						<article id="member4" class="members d-flex flex-column align-items-center"  onMouseOver="changeColor('member4')" onMouseOut="changeColor('member4')">
+							<div class="circle">
+								<img src="images/memberG.png">
+							</div>
+							<h3 class="members-name">Alain Strument</h3>
+							<p class="members-role">Pilote ULM - Instructeur</p>
+							<hr>
+							<p class="members-phone"> + 88 98 41 62 19</p>
+							<div class="members-socialLink d-flex justify-content-center align-items-center">
+								<a class="mailLogo" href="mailto:example@gmail.com" target="_blank"><img src="images/Letter.png"></a>
+								<a class="facebookLogo" href="https://facebook.com" target="_blank"><img src="images/Facebook.png"></a>
+								<a class="linkedinLogo" href="https://linkedin.com" target="_blank"><img src="images/LinkedIn.png"></a>
+							</div>
+						</article>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- Faculty Section Ends -->
+		<!-- Faculty Section end -->
 		
 		<!-- Upcoming Events Section Starts -->
 		<section class="events" id="events">
@@ -683,5 +682,6 @@
 		<script src="js/header.js"></script>
 		<script src="js/loading.js"></script>
 		<script src="js/cookie.js"></script>
+		<script src="js/abouts-us.js"></script>
 	</body>
 </html>
