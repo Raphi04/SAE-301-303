@@ -8,9 +8,11 @@
 /***** 	    General css		     ****/
 /************************************/
 
+:root {
+	font-family: Poppins !important;
+}
 html {
 	overflow-x: hidden;
-	font-family: Poppins;
 }
 html::-webkit-scrollbar {
 	width: 7px;
@@ -24,17 +26,6 @@ html::-webkit-scrollbar-thumb {
 
 body{
 	font-size: 16px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	margin-top:0;
-	font-weight: 700;
-}    
-
-h3 {
-	margin-top:0;
-	font-weight: 700;
-	color: red;
 }
 
 img{
@@ -83,7 +74,7 @@ a:focus{
 }
 
 #cookieContainer > h2 {
-	font-weight: normal;
+	font-weight: 600;
 	font-size: 25px;
 	color: #3874CB;
 }
@@ -91,6 +82,7 @@ a:focus{
 #cookieContainer > p {
 	color: #3874CB;
 	font-size: 20px;
+	font-weight: 400;
 }
 
 .cookieButton {
@@ -98,6 +90,7 @@ a:focus{
 	padding: 5px 15px;
 	font-size: 20px;
 	transition: transform 0.3s;
+	font-weight: 400;
 }
 
 .cookieButton:hover {
@@ -200,7 +193,7 @@ header .navbar-collapse.collapse{
 .navbar .navbar-nav .nav-link{
 	padding: 5px 10px;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 600;
 	color: rgba(255, 255, 255, 0.85);
 	text-transform: uppercase;
 	border-radius: 4px;
@@ -210,13 +203,13 @@ header .navbar-collapse.collapse{
 
 .navbar .navbar-nav .nav-link.active{
 	color: #FFF;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus{
 	color: #FFF;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 .navbar .navbar-nav .nav-link.active:hover,
@@ -297,7 +290,7 @@ header .navbar-collapse.collapse{
 	font-size: 20px;
 	border-radius: 30px;
 	color: white;
-	z-index: 100;
+	z-index: 99;
 	transition: transform 0.3s;
 }
 
@@ -330,7 +323,7 @@ header .navbar-collapse.collapse{
 .titleACF2L {
 	font-size: 63px;
 	color: #fff;
-	font-weight: 100;
+	font-weight: 200;
 }
 
 .description {
@@ -419,7 +412,7 @@ header .navbar-collapse.collapse{
 }
 
 .our-activities .our-activities-title p {
-	font-weight: 500px;
+	font-weight: 400px;
 	font-size: 24px;
 }
 
@@ -503,7 +496,7 @@ header .navbar-collapse.collapse{
 }
 
 .courses .courses-title p {
-	font-weight: 500px;
+	font-weight: 400px;
 	font-size: 24px;
 }
 
@@ -563,7 +556,7 @@ header .navbar-collapse.collapse{
 .price {
 	color: #3874CB;
 	font-size: 25px;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 /************************************/
@@ -588,7 +581,7 @@ header .navbar-collapse.collapse{
 }
 
 .about-us .about-title p {
-	font-weight: 500px;
+	font-weight: 400px;
 	font-size: 24px;
 }
 
@@ -655,7 +648,7 @@ header .navbar-collapse.collapse{
 }
 
 .faculty .faculty-title p {
-	font-weight: 500px;
+	font-weight: 400;
 	font-size: 24px;
 }
 
@@ -712,7 +705,7 @@ header .navbar-collapse.collapse{
 
 .faculty .members .members-role {
 	color: #3874CB;
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 20px;
 	margin: 0;
 }
@@ -782,7 +775,7 @@ header .navbar-collapse.collapse{
 }
 
 .events .events-title p {
-	font-weight: 500px;
+	font-weight: 400;
 	font-size: 24px;
 }
 
@@ -847,13 +840,13 @@ header .navbar-collapse.collapse{
 .events-swiper .article-background .events-info .events-date {
 	width: 95%;
 	color: #3874CB;
-	padding: 20px;
+	padding: 15px;
 	border-radius: 10px;
 	margin: 10px 0px;
 }
 
 .events-swiper .article-background .events-info .events-date p {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 25px;
 	margin: 0;
 }
@@ -863,7 +856,7 @@ header .navbar-collapse.collapse{
 }
 
 .events-swiper .article-background .events-info .events-more-info p{
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0px 0px 0px 10px;
 }
 
@@ -878,7 +871,7 @@ header .navbar-collapse.collapse{
 
 @media only screen and (max-width: 1536px){
 	.events-swiper .article-background .events-info .events-date p {
-		font-weight: 700;
+		font-weight: 600;
 		font-size: 18px;
 		margin: 0;
 	}
@@ -919,7 +912,7 @@ header .navbar-collapse.collapse{
 	.price {
 		color: #3874CB;
 		font-size: 20px;
-		font-weight: bold;
+		font-weight: 600;
 	}
 
 	.courses > div > h2 {
@@ -948,6 +941,9 @@ header .navbar-collapse.collapse{
 }
 
 @media only screen and (max-width: 1385px){
+	.navbar-brand {
+		min-width: 100%;
+	}
 	.about-us #about-avion {
 		top: 210px;
 	}
@@ -1110,7 +1106,11 @@ header .navbar-collapse.collapse{
 	}
 
 	.titleACF2L {
-		font-size: 40px;
+		font-size: 64px;
+	}
+	
+	.description {
+		font-size: 20px;
 	}
 }
 
@@ -1196,7 +1196,11 @@ header .navbar-collapse.collapse{
 	}
 
 	.titleACF2L {
-		font-size: 30px;
+		font-size: 55px;
+	}
+
+	.description {
+		font-size: 16px
 	}
 
 	.header .container{
@@ -1207,6 +1211,10 @@ header .navbar-collapse.collapse{
 }
 
 @media only screen and (max-width: 412px) {
+	.titleACF2L {
+		font-size: 45px;
+	}
+
 	.our-activities-title h2, .courses-title h2, .about-title h2, .faculty-title h2, .events-title h2 {
 		font-size: 35px !important;
 	}
