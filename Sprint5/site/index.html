@@ -3,54 +3,27 @@
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Bienvenue sur le site officiel de L'ACF2L ! Rejoignez nous dans notre centre de formation aéraunotique de l'aéroclub de Frotey-lès-Lure. Nous proposons de former de futur pilote et instructeur ainsi que des baptème de l'air.">
 		<meta name="keywords" content="aéroclub, aviation, club, aéronotique, avion, ACF2L">
 		<meta name="author" content="Raphael CADETE, Hugo BAJOUE, Yanis WONG">
-		
-		<!-- Page Title -->
+	
 		<title>ACF2L - Aéroclub de Frotey-lès-Lure</title>
 
-		<!-- Google Fonts css-->
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;700&display=swap" rel="stylesheet">
-
-		<!-- Bootstrap css -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-		<!-- Font Awesome icon css-->
-		<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
-		<link href="css/flaticon.css" rel="stylesheet" media="screen">
-
-		<!-- Swiper's CSS -->
-		<link rel="stylesheet" href="css/swiper.min.css">
-
-		<!-- Animated css -->
-		<link href="css/animate.css" rel="stylesheet">
-
-		<!-- Magnific Popup CSS -->
-		<link href="css/magnific-popup.css" rel="stylesheet">
-
-		<!-- Slick nav css -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 		<link rel="stylesheet" href="css/slicknav.css">
-
-		<!-- Main custom css -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link href="css/custom.css" rel="stylesheet" media="screen">
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<link rel="icon" type="image/x-icon" href="images/logo.png">
 	</head>
-
 	<body data-spy="scroll" data-target="#main-navbar" data-offset="71">
 
 		<!-- Cookie Start -->
 		<article id="cookieContainer" class="container-fluid d-flex flex-column align-items-start">
 			<h2>COOKIES</h2>
-			<p>Autorisez vous la collecte données à des fins commerciales lors de votre navigation sur notre site </p>
+			<p>Autorisez vous la collecte des données à des fins commerciales lors de votre navigation sur notre site </p>
 			<div class="d-flex align-items-center justify-content-start">
 				<div onClick="setCookie('cookie', 'accepted', '7')" class="cookieButton" id="cookieAccepter">Accepter</div>
 				<div onClick="cookiePopUpClose()" class="cookieButton" id="cookieRefuser">Refuser</div>
@@ -96,7 +69,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light" id="main-navbar">
 				<div class="container-fluid">
 					<!-- Navbar Brand start -->
-					<a class="navbar-brand col-md-3" href="#"><img class="logo" src="images/logo.png" alt="" /></a>
+					<a class="navbar-brand col-md-3 d-flex align-items-center" href="#"><img class="logo" src="images/logo.png" alt="" /><div class="navbar-toggle" onClick="responsiveMenu()"></div>					</a>
 					<!-- Navbar Brand end -->
 					
 					<ul class="navbar-nav col-md-9" id="main-menu">
@@ -106,18 +79,17 @@
 						<li class="nav-item"><a class="nav-link" href="#about-us">MATERIEL</a></li>
 						<li class="nav-item"><a class="nav-link" href="#teachers">EQUIPE</a></li>
 						<li class="nav-item"><a class="nav-link" href="#events">EVENEMENTS</a></li>
-						<li class="nav-item"><a class="nav-link" href="#review">AVIS</a></li>
+						<li class="nav-item"><a class="nav-link" href="#review">TARIFS</a></li>
 						<li id="navContact" class="nav-item" ><a class="nav-link" href="#contact">CONTACT</a></li>
 					</ul>
 						
-					<div class="navbar-toggle"></div>
 					<div id="responsive-menu"></div>
 				</div>
 			</nav>	
 		</header>
 		<!-- Header Section End -->
 		
-		<!-- Banner Slider Section starts -->
+		<!-- Home Section Starts -->
 		<section class="container-fluid px-0" id="home">
 			<article class="row no-gutters">
 				<div class="col-md-10 d-flex flex-column justify-content-center bg-image">
@@ -133,10 +105,11 @@
 				</div>
 			</article>
 		</section>
+		<!-- Home Section End-->
 		
 		<!-- Activities Section Starts -->
 		<section class="our-activities d-flex container-fluid p-0" id="activities">
-			<div class="row no-gutters w-100">
+			<div class="row no-gutters">
 				<article class="col-md-7 d-flex flex-column justify-content-center align-items-start" id="textContainer">
 					<div class="our-activities-title">
 						<h2>Activités</h2>
@@ -152,7 +125,7 @@
 						<li>un hébergement en proposant trois studios et six chambres pour les élèves stagiaires.</li>
 						<li>location d’emplacement ULM dans des hangars pour les particuliers.</li>
 					</ul>
-					<div class="w-100 d-flex justify-content-md-around align-items-center">
+					<div class="w-100 d-flex justify-content-md-around align-items-start">
 						<div class="p-0 col-md-3 d-flex flex-column justify-content-center align-items-center">
 							<div class="rounded-circle d-flex justify-content-center align-items-center">
 								<img src="images/hotelBed.png" alt="Hôtel">
@@ -185,7 +158,7 @@
 					<h2>Nos Véhicules</h2>
 					<p>Voici les différents véhicule mis à votre disposition</p>
 				</div>				
-				<div class=" col-md-12 d-flex justify-content-md-around align-items-center">
+				<div class=" col-md-12 d-flex justify-content-md-around align-items-start">
 					<article class="vehicule d-flex flex-column align-items-center p-0">
 						<div class="vehicule-image w-100"></div>
 						<div class="col-md-12 p-0">
@@ -276,7 +249,7 @@
 						<h2>Notre Équipe</h2>
 						<p>Les personnes qui vont vous accueillir à notre aéroclub</p>
 					</div>
-					<div class="col-md-12 d-flex justify-content-md-around align-items-center">
+					<div class="members-container col-md-12 d-flex justify-content-md-around align-items-center">
 						<article id="member1" class="members d-flex flex-column align-items-center" onMouseOver="changeColor('member1')" onMouseOut="changeColor('member1')">
 							<div class="circle rounded-circle">
 								<img class="rounded-circle" src="images/memberG.png">
@@ -354,7 +327,7 @@
 									<img src="images/event-5.jpg">
 									<div class="d-flex flex-column align-items-center events-info text-white">
 										<p>1er Rassemblement ULM des Femmes Pilotes</p>
-										<div class="events-date bg-white d-flex justify-content-center align-items-center">
+										<div class="events-date bg-white d-flex justify-content-center align-items-center text-center">
 											<p>8 et 9 Mars - 2023</p>
 										</div>
 										<div class="d-flex flex-column align-items-start mt-4">
@@ -375,7 +348,7 @@
 									<img src="images/event-5.jpg">
 									<div class="d-flex flex-column align-items-center events-info text-white">
 										<p>1er Rassemblement ULM des Femmes Pilotes</p>
-										<div class="events-date bg-white d-flex justify-content-center align-items-center">
+										<div class="events-date bg-white d-flex justify-content-center align-items-center text-center">
 											<p>8 et 9 Mars - 2023</p>
 										</div>
 										<div class="d-flex flex-column align-items-start mt-4">
@@ -396,7 +369,7 @@
 									<img src="images/event-5.jpg">
 									<div class="d-flex flex-column align-items-center events-info text-white">
 										<p>1er Rassemblement ULM des Femmes Pilotes</p>
-										<div class="events-date bg-white d-flex justify-content-center align-items-center">
+										<div class="events-date bg-white d-flex justify-content-center align-items-center text-center">
 											<p>8 et 9 Mars - 2023</p>
 										</div>
 										<div class="d-flex flex-column align-items-start mt-4">
@@ -417,7 +390,7 @@
 									<img src="images/event-5.jpg">
 									<div class="d-flex flex-column align-items-center events-info text-white">
 										<p>1er Rassemblement ULM des Femmes Pilotes</p>
-										<div class="events-date bg-white d-flex justify-content-center align-items-center">
+										<div class="events-date bg-white d-flex justify-content-center align-items-center text-center">
 											<p>8 et 9 Mars - 2023</p>
 										</div>
 										<div class="d-flex flex-column align-items-start mt-4">
@@ -438,7 +411,7 @@
 									<img src="images/event-5.jpg">
 									<div class="d-flex flex-column align-items-center events-info text-white">
 										<p>1er Rassemblement ULM des Femmes Pilotes</p>
-										<div class="events-date bg-white d-flex justify-content-center align-items-center">
+										<div class="events-date bg-white d-flex justify-content-center align-items-center text-center">
 											<p>8 et 9 Mars - 2023</p>
 										</div>
 										<div class="d-flex flex-column align-items-start mt-4">
@@ -462,77 +435,7 @@
 		</section>
 		<!-- Upcoming Events Section End -->
 		
-		<!-- Testimonial Section Starts -->
-		<section class="testimonial" id="review">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<!-- Section title start -->
-						<div class="section-title">
-							<h2 class="color-orange">Parents Testimonial</h2>
-							<p>Lorem ipsum dolor sit amet, ipsum dolor sit amet</p>
-						</div>
-						<!-- Section title end -->
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-md-12">
-						<div class="testimonial-slider-wrapper-outer">
-							<div class="testimonial-slider-wrapper">
-								<div class="swiper-container testimonial-slider">
-									<div class="swiper-wrapper">
-										<!-- Testimonial Slide start -->
-										<div class="swiper-slide">
-											<div class="testimonial-slide">
-												<figure>
-													<img src="images/team-4.jpg" alt="" />
-												</figure>
-												
-												<h3>Krystal Hickman</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-											</div>
-										</div>
-										<!-- Testimonial Slide end -->
-										
-										<!-- Testimonial Slide start -->
-										<div class="swiper-slide">
-											<div class="testimonial-slide">
-												<figure>
-													<img src="images/team-4.jpg" alt="" />
-												</figure>
-												
-												<h3>Krystal Hickman</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-											</div>
-										</div>
-										<!-- Testimonial Slide end -->
-										
-										<!-- Testimonial Slide start -->
-										<div class="swiper-slide">
-											<div class="testimonial-slide">
-												<figure>
-													<img src="images/team-4.jpg" alt="" />
-												</figure>
-												
-												<h3>Krystal Hickman</h3>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-											</div>
-										</div>
-										<!-- Testimonial Slide end -->
-									</div>
-
-									<!-- Testimonial Pagination start -->
-									<div class="testimonial-pagination"></div>
-									<!-- Testimonial Pagination end -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Testimonial Section Ends -->
+		
 		
 		<!-- Photo Gallery Section Starts -->
 		<section class="photo-gallery" id="gallery">
@@ -713,19 +616,16 @@
 		
 		<!-- Jquery Library File -->
 		<script src="js/jquery-1.12.4.min.js"></script>
+
 		<!-- Bootstrap js file -->
 		<script src="js/bootstrap.min.js"></script>
-		<!-- Wow js file -->
-		<script src="js/wow.js"></script>
+
 		<!-- Swiper Carousel js file -->
-		<script src="js/swiper.min.js"></script>
-		<script src="js/SwiperAnimation.min.js"></script>
-		<!-- Magnific Popup core JS file -->
-		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 		<!-- Slick Nav js file -->
 		<script src="js/jquery.slicknav.js"></script>
-		<!-- SmoothScroll -->
-		<script src="js/SmoothScroll.js"></script>
+
 		<!-- Main Custom js file -->
 		<script src="js/function.js"></script>
 		<script src="js/header.js"></script>
@@ -733,5 +633,6 @@
 		<script src="js/cookie.js"></script>
 		<script src="js/abouts-us.js"></script>
 		<script src="js/events-slider"></script>
+
 	</body>
 </html>
