@@ -865,6 +865,214 @@ header .navbar-collapse.collapse{
 	height: 15px;
 }
 
+/*************************************/
+/*****      Footer area css      *****/
+/*************************************/
+
+footer.footer {
+	text-align: center;
+	background-color: #3874CB;
+}
+
+
+.footer-copyright {
+	max-width: 568px;
+	margin: 0 auto;
+}
+
+.footer-copyright p {
+	color: #ffffff;
+	line-height: 1.7em;
+	margin: 0;
+    font-size: 15px;
+}
+.footer-copyright_ p {
+	color: #ffffff;
+	line-height: 1.7em;
+	margin: 0;
+    font-size: 13px;
+}
+.footer-copyright p a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+footer .d-flex a img {
+	width: 30px;
+}
+
+.bg-b {
+	height: 30px;
+	width: 30px;
+	background-color: #3874CB;
+	border-radius: 50%;
+}
+
+.bg-b2 {
+	height: 30px;
+	width: 30px;
+	background-color: #3874CB;
+}
+
+.bg-w {
+	height: 35px;
+	width: 35px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.bg-b img {
+	height: 20px;
+}
+
+.mb-0 ml-3 text-white font-weight-bold {
+	font-size: 20px;
+}
+
+#tarif {
+	background-image: url('../images/planeActivité.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 100px;
+	position: relative;
+}
+
+#t1 {
+	color: white;
+	font-weight: 600;
+}
+
+#t3 {
+	color: white;
+	font-weight: 600;
+}
+
+h4 {
+	margin-bottom: 15px;
+}
+
+#imagef {
+	transform: translateY(-99%);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+footer {
+	position: relative;
+}
+
+#num {
+	font-weight: 600;
+}
+
+#mailo {
+	font-weight: 600;
+}
+
+#local {
+	font-weight: 600;
+}
+
+#style1 {
+	color: #3874CB;
+	font-weight: 600;
+}
+
+#style2 {
+	color: #3874CB;
+}
+
+#style3 {
+	color: #3874CB;
+}
+
+#aero {
+	margin-left: 30px;
+}
+
+#e1 {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+
+#e2 {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+
+#e3 {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+
+.tarif {
+	padding: 150px 100px;
+}
+
+.tarif .tarif-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.tarif .tarif-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.tarif .tarif-title p {
+	font-weight: 400px;
+	font-size: 24px;
+}
+
+.tarif .tarif-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.tarif .bg-b2 form input[type="submit"] {
+	color: #3874CB;
+	background-color: white;
+	border-radius: 35px;
+	border: none;
+	padding: 10px 15px;
+	font-weight: 700;
+	transition: transform 0.3s;
+}
+
+.tarif .bg-b2 form input[type="submit"]:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+.tarif .bg-white form input[type="submit"] {
+	color: white;
+	background-color: #3874CB;
+	border-radius: 35px;
+	border: none;
+	padding: 10px 15px;
+	font-weight: 700;
+	transition: transform 0.3s;
+}
+
+.tarif .bg-white form input[type="submit"]:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+#tarif-container {
+	margin-bottom: 50px;
+}
+
+#logoFooter{
+	width: 55px;
+	height: 55px;
+}
 /************************************/
 /*****       Media Screens      *****/
 /************************************/
@@ -940,7 +1148,7 @@ header .navbar-collapse.collapse{
 	}
 }
 
-@media only screen and (max-width: 1385px){
+@media only screen and (max-width: 1460px){
 	.navbar-brand {
 		min-width: 100%;
 	}
@@ -995,6 +1203,24 @@ header .navbar-collapse.collapse{
 
 	.faculty .members .members-socialLink img {
 		width: 30px;
+	}
+
+	#tarif-container{
+		flex-direction: column;
+		align-items: center !important	;
+		justify-content: center;
+	}
+
+	#e1 {
+		min-width: 80%;
+	}
+
+	#e2 {
+		min-width: 80%;
+	}
+
+	#e3 {
+		min-width: 80%;
 	}
 }
 
@@ -1112,6 +1338,15 @@ header .navbar-collapse.collapse{
 	.description {
 		font-size: 20px;
 	}
+
+	#logoFooter{
+		margin-left: 15px;
+	}
+
+	#aero{
+		margin-top: 15px;
+		margin-right: 30px;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -1148,22 +1383,38 @@ header .navbar-collapse.collapse{
 		transform: translateY(0);
 	}
 	
-	.courses, .faculty, .about-us, .events{
+	.courses, .faculty, .about-us, .events, .tarif{
 		padding: 50px 25px;
 	}
 	
-	.header-social-link,
+	.header-social-link ,
 	.school-info{
 		text-align: center;
 	}
 	
-	.school-info ul li{
+	.school-info ul li {
 		display: block;
 	}
 	
-	.school-info ul li:before{
+	.school-info ul li:before {
 		display: none;
 	}	
+
+	#j1 {
+		justify-content: space-between !important;
+	}
+
+	#j2 {
+		justify-content: space-between !important;
+	}
+
+	#j3 {
+		justify-content: space-between !important;
+	}
+
+	#aero {
+		padding-top: 15px;
+	}
 }
 
 @media only screen and (max-width: 575px){
@@ -1208,6 +1459,28 @@ header .navbar-collapse.collapse{
 		padding-left: 15px !important;
 		padding-right: 15px !important;
 	}
+
+	#t1 {
+		font-size: 23px;
+	}
+
+	#style1 {
+		font-size: 23px;
+	}
+
+	#t3 {
+		font-size: 23px;
+	}
+
+	#aero {
+		padding-top: 15px;
+		margin-left: 0px !important;
+	}
+
+	#logoFooter{
+        width: 55px;
+        height: 55px;
+    }
 }
 
 @media only screen and (max-width: 412px) {
@@ -1235,6 +1508,59 @@ header .navbar-collapse.collapse{
 	.events-swiper {
 		width: 100%;
 	}
+
+	#t1 {
+		font-size: 18px;
+	}
+
+	#style1 {
+		font-size: 18px;
+	}
+
+	#t3 {
+		font-size: 18px;
+	}
+
+	h4 {
+		font-size: 17px;
+	}
+
+	.texte {
+		font-size: 14px;
+	}
+
+	#aero {
+		font-size: 14px;
+		padding-top: 10px;
+		margin-left: 0px !important;
+	}
+
+	#local {
+		font-size: 14px;
+	}
+
+	#mailo {
+		font-size: 14px;
+	}
+
+	#num {
+		font-size: 14px;
+	}
+
+	.bg-b {
+		width: 28px;
+		height: 28px;
+	}
+
+	.bg-w {
+		width: 32px;
+		height: 32px;
+	}
+
+	.bg-b img {
+		height: 18px;
+	}
+
 }
 
 @media only screen and (max-width: 396px) {
@@ -1243,4 +1569,34 @@ header .navbar-collapse.collapse{
 		height: 100px;
 	}
 
+	#t1 {
+		font-size: 17px;
+	}
+
+	#style1 {
+		font-size: 17px;
+	}
+
+	#t3 {
+		font-size: 17px;
+	}
+
+	#aero {
+		margin-right: 0px;
+	}
+
+	h4 {
+		font-size: 15px;
+	}
+
+	.texte {
+		font-size: 13px;
+	}
+
+	#tarif{
+		background-image: url('../images/pexels-asad-photo-maldives-2245287\ 10.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 100px;
+	}
 }
