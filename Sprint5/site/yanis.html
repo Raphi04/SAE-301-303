@@ -45,15 +45,72 @@
 		<![endif]-->
 	</head>
     <body class="container-fluid p-0">
+		<div class="container-fluid d-flex justify-content-center align-items-end" id="bg">
+			<div class="our-activities-title">
+				<h2>Tarifs</h2>
+				<p>Nos offres du moment</p>
+			</div>
+			<div class="col-3 mt-5 mb-5 d-flex justify-content-center bg-b2 h-100 flex-column ml-0 mr-0 pr-0 pl-0 align-items-center pt-4 text-center" id="e1">
+				<h3 id="t1" class="w-50 pb-3">Baptême de l'air 
+					ULM Pendulaire</h3>
+					<img  class="w-100"  src="images/pendulaire1.jpg" alt="modele ULM">
+					<div class="m-4 mr-5 ml-5 text-justify text-white mb-0">
+						<h4>Prestation</h4>
+						<p class="texte">Accompagné par un instructeur diplômé, vous découvrez le vol en ULM. Survol de la région: découvrez les paysages superbes de Moffans-et-Vacheresse, Lyoffans et Roye.20 minutes de vol dans une ambiance détendue et conviviale.</p>
+					</div>
+					<div id="j1" class="d-flex pb-5 justify-content-md-between col-12 ml-5 mr-5 pr-5 pl-5 align-items-center">
+						<form action="/ma-page-de-traitement" method="post">
+							<button type="submit">Réserver</button>
+							<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
+						</form>
+						<h4 class="text-white mb-0">190,00 €</h4>	
+					</div>
+			</div>
+			<div class="col-3 mt-5 mb-5 d-flex justify-content-center bg-white h-100 flex-column ml-0 mr-0 pr-0 pl-0 align-items-center pt-4  text-center" id="e2">
+				<h3 class="w-50 pb-3" id="style1" id="bleu">Baptême de l'air 
+					ULM AutoGire</h3>
+					<img  class="w-100" src="images/troisAutogires.jpg" alt="modele ULM">
+					<div class="m-4 mr-5 ml-5 text-justify mb-0" id="style2">
+						<h4>Prestation</h4>
+						<p class="texte">Vous prendrez pour la première fois les commandes d'un ULM à bord d'un appareil dont la simplicité vous étonnera.Un instructeur diplômé vous accompagnera tout au long de ce vol d'initiation.Le système de double commande vous permettra en toute sécurité de découvrir le pilotage d'un appareil hors normes.Pendant 30 minutes, initiez-vous au maniement des commandes de base de cet appareil et découvrez les sensation d'un vol à bord d'un ULM.</p>
+					</div>
+					<div id="j2" class="d-flex pb-5 justify-content-md-between col-12 ml-5 mr-5 pr-5 pl-5 align-items-center">
+						<form action="/ma-page-de-traitement" method="post">
+							<button type="submit">Réserver</button>
+							<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
+						</form>
+						<h4 id="style3" class="mb-0">260,00 €</h4>	
+					</div>				
+			</div>
+			<div class="col-3 mt-5 mb-5 d-flex justify-content-center bg-b2 h-100 flex-column ml-0 mr-0 pr-0 pl-0 align-items-center pt-4  text-center" id="e3">
+				<h3 id="t3" class="w-50 pb-3">Baptême de l'air 
+					Multi - Axes</h3>
+					<img class="w-100"  src="images/pexels-jonathan-moore-239194.jpg" alt="modele ULM">
+					<div class="m-4 mr-5 ml-5 text-justify text-white mb-0">
+						<h4>Prestation</h4>
+						<p class="texte">Prenez place à bord d'un ULM dont le comportement vous étonnera par sa ressemblance avec celui d'un avion.Un instructeur diplômé vous accompagnera tout au long de ce vol d'initiation.Découvrez en toute sécurité le pilotage.Pendant 30 minutes, initiez-vous au maniement des commandes de base de cet appareil.</p>
+					</div>
+					<div id="j3" class="d-flex pb-5 justify-content-md-between col-12 ml-5 mr-5 pr-5 pl-5 align-items-center">
+						<form action="/ma-page-de-traitement" method="post">
+							<button type="submit">Réserver</button>
+							<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
+						</form>
+						<h4 class="text-white mb-0">380,00 €</h4>
+					</div>
+			</div>
+		</div>
+
+
+
         <footer class="footer container-fluid ">
 			<div class="container-fluid p-0">
-				<img class="w-100" src="images/Group51.png" alt="design">
+				<img class="w-100" id="imagef" src="images/Group51.png" alt="design">
 				<div class="row">
 					<div class="col-md-12">
 						<!-- Footer logo start -->
-						<div class="footer-logo row d-flex justify-content-center align-items-center mb-4 mt-5">
+						<div class="footer-logo row d-flex justify-content-center align-items-center mb-3">
 							<img src="images/logo.png" id="logoFooter" alt="Logo"/>
-							<p class="mb-0 ml-3 text-white font-weight-bold"> Aéro-Club de Frotey-les-Lure - Association enregistrée n°04674 - - Agrément n° AS70986858</p>
+							<p id="aero" class="mb-0 text-white"> Aéro-Club de Frotey-les-Lure - Association enregistrée n°04674 - - Agrément n° AS70986858</p>
 						</div>
 						<div class="d-flex justify-content-center align-items-center flex-column">
 							<div class="d-flex mb-1 align-items-center">
@@ -62,7 +119,7 @@
 										<img src="images/Location.png" alt="Localisation">
 									</div>
 								</div>
-								<p class="font-weight-bold mb-0">62, Avenue de la République, 70200 Lure</p>
+								<p id="local" class="mb-0">62, Avenue de la République, 70200 Lure</p>
 							</div>
 							<div class="d-flex mb-1 align-items-center">
 								<div class="bg-w d-flex align-items-center justify-content-center mr-3">
@@ -70,7 +127,7 @@
 										<img src="images/LetterF.png" alt="Mail">
 									</div>
 								</div>
-								<p class="font-weight-bold mb-0">acf2l@gmail.com</p>
+								<p id="mailo" class="mb-0">acf2l@gmail.com</p>
 							</div>
 							<div class="d-flex mb-1 align-items-center">
 								<div class="bg-w d-flex align-items-center justify-content-center mr-3">
@@ -78,7 +135,7 @@
 										<img src="images/Phone.png" alt="Téléphone">
 									</div>
 								</div>
-								<p class="font-weight-bold mb-0">+33 01 60 56 60 60</p>
+								<p id="num" class="mb-0">+33 01 60 56 60 60</p>
 							</div>
 						</div>
                         <div class="d-flex align-items-center justify-content-center mb-3">
@@ -90,7 +147,7 @@
 						<!-- Footer logo end -->
 						
 						<!-- Footer Copyright start -->
-						<div class="footer-copyright">
+						<div class="footer-copyright mb-5">
 							<p class="text-sm font-weight-bold">&copy; ACF2L Tous droits réservés</p>
 							<div class="footer-copyright_">
 								<p class="text-sm">Un projet Universitaire de <a href="https://www.linkedin.com/in/yaniswong04" target="_blank" class="fw-bold">Yanis WONG</a>, <a href="https://www.linkedin.com/in/raphaelcadete/" target="_blank">Raphael CADETE</a> et <a href="https://www.linkedin.com/in/hugo-bajoue/" target="_blank">Hugo BAJOUE</a></p>

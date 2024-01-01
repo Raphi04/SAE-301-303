@@ -829,7 +829,6 @@ a:focus{
 /*************************************/
 
 footer.footer{
-	padding: 60px 0;
 	text-align: center;
 }
 
@@ -866,6 +865,11 @@ footer.footer{
 	background-color: #3874CB;
 	border-radius: 50%;
 }
+.bg-b2{
+	height: 30px;
+	width: 30px;
+	background-color: #3874CB;
+}
 .bg-w{
 	height: 35px;
 	width: 35px;
@@ -877,4 +881,196 @@ footer.footer{
 }
 .mb-0 ml-3 text-white font-weight-bold{
 	font-size: 20px;
+}
+#bg{
+	background-image: url('../images/planeActivité.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 100px;
+	position: relative;
+}
+
+#t1{
+	color: white;
+	font-weight: 600;
+}
+
+#t3{
+	color: white;
+	font-weight: 600;
+}
+h4{
+	margin-bottom: 15px;
+}
+#imagef{
+	transform: translateY(-99%);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+footer{
+	position: relative;
+}
+#num{
+	font-weight: 600;
+}
+#mailo{
+	font-weight: 600;
+}
+#local{
+	font-weight: 600;
+}
+#style1{
+	color: #3874CB;
+	font-weight: 600;
+}
+#style2{
+	color: #3874CB;
+}
+#style3{
+	color: #3874CB;
+}
+#aero{
+	margin-left: 30px;
+}
+#e1{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+#e2{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+#e3{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+.our-activities-title{
+	color: white;
+	position: absolute;
+	top: 50px;
+	left: 65px;
+	padding-left: 40px;
+	height: 100px;
+	border-left: white solid 15px;
+}
+@media screen and (max-width:1175px) {
+	#bg{
+		flex-direction: column;
+		align-items: center !important	;
+		justify-content: center;
+	}
+	#e1{
+		min-width: 80%;
+	}
+	#e2{
+		min-width: 80%;
+	}
+	#e3{
+		min-width: 80%;
+	}
+}
+@media screen and (max-width:855px) {
+	#logoFooter{
+		margin-left: 15px;
+	}
+	#aero{
+		margin-top: 15px;
+		margin-right: 30px;
+	}
+}
+@media screen and (max-width:767px) {
+	#j1{
+		justify-content: space-between !important;
+	}
+	#j2{
+		justify-content: space-between !important;
+	}
+	#j3{
+		justify-content: space-between !important;
+	}
+	#aero{
+		padding-top: 15px;
+	}
+}
+@media screen and (max-width:575px) {
+	#t1{
+		font-size: 23px;
+	}
+	#style1{
+		font-size: 23px;
+	}
+	#t3{
+		font-size: 23px;
+	}
+	#aero{
+		padding-top: 15px;
+		margin-left: 0px !important;
+	}
+}
+@media screen and (max-width:412px) {
+	#t1{
+		font-size: 18px;
+	}
+	#style1{
+		font-size: 18px;
+	}
+	#t3{
+		font-size: 18px;
+	}
+	h4{
+		font-size: 17px;
+	}
+	.texte{
+		font-size: 14px;
+	}
+	#aero{
+		font-size: 14px;
+		padding-top: 10px;
+		margin-left: 0px !important;
+	}
+	#local{
+		font-size: 14px;
+	}
+	#mailo{
+		font-size: 14px;
+	}
+	#num{
+		font-size: 14px;
+	}
+	.bg-b{
+		width: 28px;
+		height: 28px;
+	}
+	.bg-w{
+		width: 32px;
+		height: 32px;
+	}
+	.bg-b img {
+		height: 18px;
+	}
+}
+@media screen and (max-width:396px){
+	#t1{
+		font-size: 17px;
+	}
+	#style1{
+		font-size: 17px;
+	}
+	#t3{
+		font-size: 17px;
+	}
+	#aero{
+		margin-right: 0px;
+	}
+	h4{
+		font-size: 15px;
+	}
+	.texte{
+		font-size: 13px;
+	}
+	#bg{
+		background-image: url('../images/pexels-asad-photo-maldives-2245287\ 10.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 100px;
+	}
+	
 }
