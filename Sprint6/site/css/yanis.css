@@ -1,0 +1,29 @@
+#container-gauche{
+    background-color: #3873cbd2;
+}
+body{
+    background-image: url("../images/pexels-lukas-1419923.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.h3bis{
+    font-weight: 600;
+    color: #3874CB;
+}
+a{
+    text-decoration: none;
+    transition-duration: 0.1s;
+    transition-property: 0.1s ease;
+}
+a:hover{
+    transform: scale(1.05);
+    text-decoration: none;
+}
+a>div{
+    box-shadow: 2px 2px 3px 0px rgba(121, 120, 120, 0.642);
+    width: 350px;
+    height: 350px;
+}
+.imagee{
+    height: 150px;
+}
