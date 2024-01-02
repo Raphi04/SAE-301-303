@@ -1,0 +1,1602 @@
+/*
+	Template Name 	: First Step - School & Education Institute HTML Template
+	Author 			: Awaiken Theme
+	Author Url 		: https://awaikenthemes.com
+*/
+
+/************************************/
+/***** 	    General css		     ****/
+/************************************/
+
+:root {
+	font-family: Poppins !important;
+}
+html {
+	overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+	width: 7px;
+	background-color: #8daccc;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: #074091;
+	width: 5px;
+}
+
+body{
+	font-size: 16px;
+}
+
+img{
+	max-width: 100%;
+}
+
+a:hover{
+	text-decoration: none;
+	outline: 0;
+}
+
+a:focus{
+	text-decoration: none;
+	outline: 0;
+}
+
+.row.no-gutters{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/************************************/
+/*****    Cookie area css   *****/
+/************************************/
+
+#cookieContainer {
+	width: 40%;
+	bottom: 65px;
+	left: 65px;
+	position: fixed;
+	padding: 15px 35px;
+	border-radius: 15px;
+	background-color: white;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	z-index: 300;
+}
+
+.cookieContainerNone {
+	display: none !important;
+}
+
+#cookieContainer > h2 {
+	font-weight: 600;
+	font-size: 25px;
+	color: #3874CB;
+}
+
+#cookieContainer > p {
+	color: #3874CB;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.cookieButton {
+	border-radius: 15px;
+	padding: 5px 15px;
+	font-size: 20px;
+	transition: transform 0.3s;
+	font-weight: 400;
+}
+
+.cookieButton:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+#cookieAccepter {
+	margin-right: 15px;
+	background-color: #3874CB;
+	border: 2px solid #3874CB;
+	color: white;
+}
+
+#cookieRefuser {
+	color: #3874CB;
+	border: 2px solid #3874CB;
+}
+
+/************************************/
+/*****    Loader area css   *****/
+/************************************/
+
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background-color: #3874CB;
+	z-index: 300;
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+.loaderDispawn {
+	opacity: 0;
+}
+
+.loaderDisplayNone {
+	display: none !important;
+}
+
+#imageLoading {
+	width: 250px;
+	transition: transform 1.5s;
+}
+
+.dispawn1 {
+	transform: scale(1.5);
+}
+
+.dispawn2 {
+	transform: scale(0.5);
+}
+
+.loader #loading {
+	position: fixed;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+}
+
+/************************************/
+/*****    Navigation area css   *****/
+/************************************/
+
+header .navbar{
+	position: fixed;
+	min-height: 84px;
+	min-width: 100%;
+	top: 0px;
+	left: 0px;
+	padding: 0;
+	background: transparent;
+	z-index: 10;
+	transition: background-color 0.7s;
+}
+
+header .navbar-collapse.collapse{
+	-webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.navbar-nav #navContact {
+	margin-left: 15%;
+}
+
+.navbar .navbar-nav .nav-item{
+	padding: 25px 6px;
+}
+
+.navbar .logo {
+	width: 70px;
+}
+
+.navbar .navbar-nav .nav-link{
+	padding: 5px 10px;
+	font-size: 18px;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.85);
+	text-transform: uppercase;
+	border-radius: 4px;
+	letter-spacing: 0.02em;
+	transition: all 0.3s;
+}
+
+.navbar .navbar-nav .nav-link.active{
+	color: #FFF;
+	font-weight: 600;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus{
+	color: #FFF;
+	font-weight: 600;
+}
+
+.navbar .navbar-nav .nav-link.active:hover,
+.navbar .navbar-nav .nav-link.active:focus{
+	color: #FFF;
+}
+
+.sticky-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+}
+
+.navbar-toggle{
+	display: none;
+}
+
+.navbar-toggle .slicknav_btn{
+	background: none;
+	border: 1px solid #FFF;
+	border-radius: 0;
+}
+
+.navbar-toggle .slicknav_icon-bar{
+	background: #FFF;
+	box-shadow: none;
+	height: 1px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+}
+
+.slicknav_menu{
+	padding: 0;
+	background: none;
+}
+
+.slicknav_btn{
+	margin: 0;
+}
+
+.slicknav_nav a{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+/**************************************/
+/*****    Banner Slider area css  *****/
+/**************************************/
+
+#home {
+	background-image: url("../images/skyBackground.png");
+	background-size: cover;
+}
+
+#home #opacity {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+#home article {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	padding: 230px 0px 125px 0px;
+}
+
+#home article p {
+	margin: 0;
+	line-height: 75px;
+}
+
+#home #decouvrir {
+	width: fit-content;
+	margin-top: 35px;
+	background-color: rgba(35, 35, 35, 0.8);
+	padding: 7px 60px;
+	font-size: 20px;
+	border-radius: 30px;
+	color: white;
+	z-index: 99;
+	transition: transform 0.3s;
+}
+
+#home #decouvrir p {
+	line-height: 35px;
+}
+
+#home #decouvrir:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+#meteoContainer {
+	transform: translateY(-5%);
+}
+
+#meteoContainer #ww_d7dc99ec54c54 {
+	border-radius: 20px;
+	transform: scale(1.2);
+}
+
+#home #goDown:hover {
+	cursor: pointer;
+}
+
+#home #goDown img {
+	width: 75%;
+}
+
+.titleACF2L {
+	font-size: 63px;
+	color: #fff;
+	font-weight: 200;
+}
+
+.description {
+	margin-top: 2% !important;
+	color: white;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 30px !important;
+}
+
+.bottom-bar{
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	background: #444;
+	z-index: 100;
+}
+
+.school-info ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.school-info ul li{
+	display: inline-block;
+	margin-left: 4px;
+}
+
+.school-info ul li:before{
+	content: '/';
+	color: #fff;
+	font-size: 14px;
+	margin-right: 8px;
+}
+
+.school-info ul li:first-child:before{
+	display: none;
+}
+
+.school-info ul li a{
+	margin: 0;
+	font-size: 14px;
+	color: #fff;
+	transition: all 0.3s;
+}
+
+.school-info ul li a i{
+	margin-right: 4px;
+}
+
+.header-social-link a{
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	color: #fff;
+	text-align: center;
+	margin-right: 4px;
+}
+/**************************************/
+/*****   Our Activities area css  *****/
+/**************************************/
+
+#activities {
+	scroll-margin: 75px;
+}
+
+.our-activities{
+	position: relative;
+}
+
+.our-activities .our-activities-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.our-activities .our-activities-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.our-activities .our-activities-title p {
+	font-weight: 400px;
+	font-size: 24px;
+}
+
+.our-activities .our-activities-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.our-activities > div > article {
+	padding: 0px 75px;
+	color: white;
+}
+
+.our-activities > div > article > p {
+	margin-left: 50px;
+	font-size: 20px;
+}
+
+.our-activities > div > article > ul {
+	margin-left: 60px;
+	font-size: 20px;
+}
+
+.our-activities > div > article > div {
+	margin-top: 55px;
+}
+
+.our-activities > div > article > div > div > div {
+	width: 120px;
+	height: 120px;
+	border: 5px solid #27518E;
+	padding: 10px;
+	background-color: white;
+}
+
+.our-activities > div > article > div > div > div > img {
+	width: 80%;
+}
+
+.our-activities > div > article > div > div > div > p {
+	font-size: 20px;
+}
+
+.our-activities #textContainer {
+	background-color: #3874CB;
+	padding: 50px 100px;
+}
+
+.our-activities #plane {
+	min-height: 400px;
+	background-image: url("../images/planeActivité.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+
+/************************************/
+/*****     Courses area css     *****/
+/************************************/
+
+.courses{
+	background-image: url("../images/coursesBackground.png");
+	background-size: cover;
+	padding: 100px 100px;
+}
+
+.courses .courses-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+}
+
+.courses .courses-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.courses .courses-title p {
+	font-weight: 400px;
+	font-size: 24px;
+}
+
+.courses .courses-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.vehicule {
+	margin-top: 70px;
+	background-color: white;
+	border-radius: 20px;
+	width: 22%;
+	box-shadow: -5px 5px 15px 2px #264e8a;
+	transition: transform 0.3s;
+}
+
+.vehicule:hover {
+	transform: scale(1.05);
+}
+
+.vehicule-image {
+	background-image: url("../images/course-3.jpg");
+	background-size: cover;
+	background-position: center center;
+	border-radius: 20px 20px 0px 0px;
+	padding-bottom: 250px;
+}
+
+.vehicule-name {
+	background-color: #3874CB;
+	border-radius: 0px 30px 30px 0px;
+	padding: 7px 0px;
+	color: white;
+	margin: 15px 0px;
+}
+
+.vehicule-name > p {
+	font-size: 25px;
+	margin: 0;
+}
+
+.vehicule-text {
+	font-size: 20px;
+}
+
+.vehicule hr {
+	width: calc(100% - 2px);
+	border: 1px solid rgba(0, 0, 0, 0.20); 
+}
+
+.price {
+	color: #3874CB;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+/************************************/
+/*****    About us area css     *****/
+/************************************/
+
+.about-us {
+	padding: 150px 100px;
+	background-color: #3874CB;
+}
+
+.about-us .about-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+}
+
+.about-us .about-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.about-us .about-title p {
+	font-weight: 400px;
+	font-size: 24px;
+}
+
+.about-us .about-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.about-us .about-text {
+	padding-left: 50px;
+	margin-top: 100px;
+	color: white;
+	font-size: 20px;
+}
+
+.about-us .about-text ul{
+	padding-left: 20px;
+}
+
+.about-us .planeMontgolfiere {
+	position: relative;
+}
+
+.about-us .planeMontgolfiere img {
+	width: 60%;
+}
+
+.about-us #about-avion {
+	position:absolute;
+	top: 100px;
+	left: 62px;
+}
+
+.about-us #about-paramoteur {
+	border-radius: 100%;
+}
+
+/************************************/
+/*****   Faculty Team area css  *****/
+/************************************/
+
+.faculty{
+	padding: 150px 100px;
+	background-image: url("../images/ciel.jpg");
+	background-size: cover;
+}
+
+.faculty .faculty-title {
+	padding: 20px 0px 20px 50px;
+	margin-bottom: 50px;
+	position: relative;
+	color: white;
+}
+
+.faculty .faculty-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.faculty .faculty-title p {
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.faculty .faculty-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.faculty .members {
+	margin-top: 50px;
+	padding: 25px 0px;
+	border-radius: 30px;
+	width: 23%;
+	background-color: white;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	transition: transform 0.3s;
+}
+
+.faculty .members.memberHovered {
+	background-color: #3874CB;
+	transform: scale(1.05);
+}
+
+.faculty .members .circle {
+	width: 150px;
+	height: 150px;
+	border: 2px solid #3874CB;
+}
+
+.faculty .members .circle.memberHovered{
+	border: 2px solid white;
+	background-color: white;
+}
+
+.faculty .members .circle img {
+	width: 100%;
+}
+
+.faculty .members .members-name {
+	color: #3874CB;
+	font-weight: 600;
+	font-size: 25px;
+	margin: 50px 0px 5px 0px; 
+}
+
+.faculty .members .members-name.memberHovered {
+	color: white;
+}
+
+.faculty .members .members-role {
+	color: #3874CB;
+	font-weight: 400;
+	font-size: 20px;
+	margin: 0;
+}
+
+.faculty .members .members-role.memberHovered {
+	color: white;
+}
+
+.faculty .members hr {
+	width: 45%;
+	margin: 10px 0px 20px 0px;
+	border: 2px solid #3874CB;
+	border-radius: 50px;
+}
+
+.faculty .members hr.memberHovered {
+	border-color: white;
+}
+
+.faculty .members .members-phone {
+	color: #73A9ED;
+	font-weight: 600;
+	font-size: 25px;
+	margin: 0;
+}
+
+.faculty .members .members-phone.memberHovered {
+	color: white;
+}
+
+.faculty .members .members-socialLink {
+	margin-top: 50px;
+}
+
+.faculty .members .members-socialLink img {
+	width: 50px;
+}
+
+.faculty .members .members-socialLink a {
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+
+.faculty .members .members-socialLink a:hover {
+	transform: scale(1.1);
+}
+
+/**********************************/
+/*****     Event area css     *****/
+/**********************************/
+
+.events{
+	padding: 150px 100px;
+	background-color: #3874CB;
+}
+
+.events .events-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+}
+
+.events .events-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.events .events-title p {
+	font-weight: 400;
+	font-size: 24px;
+}
+
+.events .events-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.events-swiper {
+	width: 80%;
+	margin-top: 20px;
+	padding: 50px;
+	background-color: white;
+	border-radius: 40px;
+	height: 650px;
+	position: relative;
+	overflow: hidden;
+}
+
+.events-swiper .events-pagination {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.events-swiper .swiper-slide {
+	border-radius: 25px;
+	border: 2px solid #3874CB;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.events-swiper .article-background {
+	position: relative;
+	padding: 20px;
+	background-color: #3874CB;
+	border-radius: 20px;
+	width: 100%;
+	height: 80%;
+}
+
+.events-swiper .article-background > img {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 65%;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	border-radius: 25px;
+}
+
+.events-swiper .article-background .events-info {
+	margin-top: 100px;
+}
+
+.events-swiper .article-background .events-info .events-date {
+	width: 95%;
+	color: #3874CB;
+	padding: 15px;
+	border-radius: 10px;
+	margin: 10px 0px;
+}
+
+.events-swiper .article-background .events-info .events-date p {
+	font-weight: 600;
+	font-size: 25px;
+	margin: 0;
+}
+
+.events-swiper .article-background .events-info .events-more-info img{
+	width: 20px;
+}
+
+.events-swiper .article-background .events-info .events-more-info p{
+	font-weight: 400;
+	margin: 0px 0px 0px 10px;
+}
+
+.events .swiper-pagination-bullet {
+	width: 15px;
+	height: 15px;
+}
+
+/*************************************/
+/*****      Footer area css      *****/
+/*************************************/
+
+footer.footer {
+	text-align: center;
+	background-color: #3874CB;
+}
+
+
+.footer-copyright {
+	max-width: 568px;
+	margin: 0 auto;
+}
+
+.footer-copyright p {
+	color: #ffffff;
+	line-height: 1.7em;
+	margin: 0;
+    font-size: 15px;
+}
+.footer-copyright_ p {
+	color: #ffffff;
+	line-height: 1.7em;
+	margin: 0;
+    font-size: 13px;
+}
+.footer-copyright p a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+footer .d-flex a img {
+	width: 30px;
+}
+
+.bg-b {
+	height: 30px;
+	width: 30px;
+	background-color: #3874CB;
+	border-radius: 50%;
+}
+
+.bg-b2 {
+	height: 30px;
+	width: 30px;
+	background-color: #3874CB;
+}
+
+.bg-w {
+	height: 35px;
+	width: 35px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.bg-b img {
+	height: 20px;
+}
+
+.mb-0 ml-3 text-white font-weight-bold {
+	font-size: 20px;
+}
+
+#tarif {
+	background-image: url('../images/planeActivité.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 100px;
+	position: relative;
+}
+
+#t1 {
+	color: white;
+	font-weight: 600;
+}
+
+#t3 {
+	color: white;
+	font-weight: 600;
+}
+
+h4 {
+	margin-bottom: 15px;
+}
+
+#imagef {
+	transform: translateY(-99%);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+footer {
+	position: relative;
+}
+
+#num {
+	font-weight: 600;
+}
+
+#mailo {
+	font-weight: 600;
+}
+
+#local {
+	font-weight: 600;
+}
+
+#style1 {
+	color: #3874CB;
+	font-weight: 600;
+}
+
+#style2 {
+	color: #3874CB;
+}
+
+#style3 {
+	color: #3874CB;
+}
+
+#aero {
+	margin-left: 30px;
+}
+
+#e1 {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+
+#e2 {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+
+#e3 {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* X-offset, Y-offset, Blur radius, Color */
+}
+
+.tarif {
+	padding: 150px 100px;
+}
+
+.tarif .tarif-title {
+	padding: 20px 0px 20px 50px;
+	position: relative;
+	color: white;
+	margin-bottom: 50px;
+}
+
+.tarif .tarif-title h2 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 600;
+	font-size: 50px;
+}
+
+.tarif .tarif-title p {
+	font-weight: 400px;
+	font-size: 24px;
+}
+
+.tarif .tarif-title::before {
+	content:"";
+	position: absolute;
+	top: 0px;
+	left: -20px;
+	width: 20px;
+	background-color: white;
+	height: 100%;
+}
+
+.tarif .bg-b2 form input[type="submit"] {
+	color: #3874CB;
+	background-color: white;
+	border-radius: 35px;
+	border: none;
+	padding: 10px 15px;
+	font-weight: 700;
+	transition: transform 0.3s;
+}
+
+.tarif .bg-b2 form input[type="submit"]:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+.tarif .bg-white form input[type="submit"] {
+	color: white;
+	background-color: #3874CB;
+	border-radius: 35px;
+	border: none;
+	padding: 10px 15px;
+	font-weight: 700;
+	transition: transform 0.3s;
+}
+
+.tarif .bg-white form input[type="submit"]:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+#tarif-container {
+	margin-bottom: 50px;
+}
+
+#logoFooter{
+	width: 55px;
+	height: 55px;
+}
+/************************************/
+/*****       Media Screens      *****/
+/************************************/
+
+@media only screen and (max-width: 1536px){
+	.events-swiper .article-background .events-info .events-date p {
+		font-weight: 600;
+		font-size: 18px;
+		margin: 0;
+	}
+	
+	.events-swiper .article-background .events-info {
+		margin-top: 75px;
+	}
+
+	.events-swiper .swiper-slide {
+		border-radius: 25px;
+		border: 2px solid #3874CB;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.events-swiper {
+		height: 550px;
+	}
+
+	#about-avion {
+		top: 165px;
+	}
+
+	.vehicule-name > p {
+		font-size: 20px;
+		margin: 0;
+	}
+	
+	.vehicule-text {
+		font-size: 16px;
+	}
+	
+	.vehicule hr {
+		width: calc(100% - 2px);
+		border: 1px solid rgba(0, 0, 0, 0.20); 
+	}
+	
+	.price {
+		color: #3874CB;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.courses > div > h2 {
+		font-size: 35px;
+	}
+
+	.our-activities > div > article > h2 {
+		font-size: 35px;
+	}
+	
+	.our-activities > div > article > p {
+		font-size: 16px;
+	}
+	
+	.our-activities > div > article > ul {
+		font-size: 16px;
+	}	
+
+	.our-activities > div > article > div > div > p {
+		font-size: 16px;
+	}
+
+	.our-activities > div > article > div {
+		margin-top: 25px;
+	}
+}
+
+@media only screen and (max-width: 1460px){
+	.navbar-brand {
+		min-width: 100%;
+	}
+	.about-us #about-avion {
+		top: 210px;
+	}
+
+	.header .navbar-nav{
+		display: none;
+	}
+
+	.header .container-fluid{
+		flex-direction: column;
+	}
+
+	#main-navbar {
+		background-color: rgb(42, 120, 235);
+	}
+
+	.header .container-fluid .navbar-brand{
+		align-self: start;
+	}
+	
+	.header .navbar{
+		align-items: flex-start;
+	}
+
+	.header .navbar .container{
+		position: relative;
+		flex-wrap: wrap;
+	}
+	
+	.header .navbar-toggle,
+	#responsive-menu{
+		display: block;
+		width: 100%;
+	}
+}
+
+@media only screen  and (max-width: 1175px){
+	.faculty .members .members-name {
+		font-size: 20px;
+	}
+
+	.faculty .members .members-role {
+		font-size: 16px;
+	}
+
+	.faculty .members .members-phone {
+		font-size: 20px;
+	}
+
+	.faculty .members .members-socialLink img {
+		width: 30px;
+	}
+
+	#tarif-container{
+		flex-direction: column;
+		align-items: center !important	;
+		justify-content: center;
+	}
+
+	#e1 {
+		min-width: 80%;
+	}
+
+	#e2 {
+		min-width: 80%;
+	}
+
+	#e3 {
+		min-width: 80%;
+	}
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 991px){
+	.events-swiper .article-background .events-info .events-date p {
+		font-size: 16px;
+	}
+
+	.events-swiper {
+		height: 635px;
+	}
+	.about-us .about-us-content {
+		min-width: 100%;
+	}
+
+	.about-us .about-text {
+		margin-top: 50px;
+	}
+
+	.about-us .planeMontgolfiere {
+		margin-top: 50px;
+		min-width: 100%;
+	}
+
+	.about-us .planeMontgolfiere img {
+		width: 40%;
+	}
+
+	.about-us .planeMontgolfiere #about-avion {
+		top: 50px;
+		left: 190px;
+	}
+
+	.members-container {
+		flex-wrap: wrap;
+	}
+
+	.faculty .members {
+		width: 35%;
+	}
+	.vehicule-name > p {
+		font-size: 16px;
+	}
+
+	.vehicule {
+		width: 45%;
+		margin-bottom: 20px;
+	}
+
+	.courses > div > div {
+		flex-wrap: wrap;
+		align-items: center !important;
+	}
+
+	#cookieContainer {
+		border-radius: 0px;
+		width: 100%;
+		bottom: 25px;
+		left: 0px;
+		box-shadow: 0px 0px 0px 0px black;
+	}
+
+	.our-activities > div > article > div > div > img{
+		width: 100%;
+	}
+
+	.our-activities > div > article > div > div > p{
+		font-size: 12px;
+	}
+
+	#plane {
+		min-width: 100%;
+	}
+
+	#textContainer {
+		min-width: 100%;
+	}
+
+	.navbar-brand{
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+}
+@media only screen and (max-width: 990px) {
+	.events-swiper {
+		width: 55%;
+		height: 550px;
+	}
+}
+
+@media only screen and (max-width: 855px){
+	#meteoContainer {
+		margin-top: 50px;
+		justify-content: center !important;
+	}
+
+	#meteoContainer #ww_d7dc99ec54c54 {
+		transform: scale(1);
+	}
+
+	#home article {
+		align-items: center;
+		text-align: center;
+	}
+
+	#home #decouvrir {
+		align-self: center;
+	}
+
+	.titleACF2L {
+		font-size: 64px;
+	}
+	
+	.description {
+		font-size: 20px;
+	}
+
+	#logoFooter{
+		margin-left: 15px;
+	}
+
+	#aero{
+		margin-top: 15px;
+		margin-right: 30px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+.members-container {
+	justify-content: space-around;
+}
+
+	.courses > div > div {
+		justify-content: center;
+	}
+
+	.vehicule {
+		width: 65%;
+	}
+
+	#cookieContainer {
+		bottom: 73px;
+	}
+
+	.vehicule-name {
+		width: 50%;
+	}
+
+	.our-activities > div > article > div >div > img{
+		width: 45%;
+	}
+
+	.our-activities > div > article > div >div > p{
+		font-size: 16px;
+	}
+	
+	#meteoContainer {
+		margin-top: 20px;
+		transform: translateY(0);
+	}
+	
+	.courses, .faculty, .about-us, .events, .tarif{
+		padding: 50px 25px;
+	}
+	
+	.header-social-link ,
+	.school-info{
+		text-align: center;
+	}
+	
+	.school-info ul li {
+		display: block;
+	}
+	
+	.school-info ul li:before {
+		display: none;
+	}	
+
+	#j1 {
+		justify-content: space-between !important;
+	}
+
+	#j2 {
+		justify-content: space-between !important;
+	}
+
+	#j3 {
+		justify-content: space-between !important;
+	}
+
+	#aero {
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.events-swiper .article-background .events-info {
+		margin-top: 45px;
+	}
+
+	.events-swiper .article-background .events-info .events-date {
+		padding: 10px;
+	}
+
+	#home > article {
+		padding: 190px 0px 85px 0px;
+	}
+
+	.our-activities #textContainer {
+		padding: 50px 25px;
+	}
+
+	#textContainer > div > div > p {
+		font-size: 14px;
+	}
+
+	#home > article {
+		padding: 210px 0px 105px 0px;
+	} 
+
+	.our-activities > div > article > div >div > img{
+		width: 75%;
+	}
+
+	.titleACF2L {
+		font-size: 55px;
+	}
+
+	.description {
+		font-size: 16px
+	}
+
+	.header .container{
+		width: 100%;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+
+	#t1 {
+		font-size: 23px;
+	}
+
+	#style1 {
+		font-size: 23px;
+	}
+
+	#t3 {
+		font-size: 23px;
+	}
+
+	#aero {
+		padding-top: 15px;
+		margin-left: 0px !important;
+	}
+
+	#logoFooter{
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+	.titleACF2L {
+		font-size: 45px;
+	}
+
+	.our-activities-title h2, .courses-title h2, .about-title h2, .faculty-title h2, .events-title h2 {
+		font-size: 35px !important;
+	}
+
+	.about-us .planeMontgolfiere #about-avion {
+		top: 15px;
+		left: 85px;
+	}
+
+	.faculty .faculty-title {
+		margin-bottom: 0px;
+	}
+
+	.faculty .members {
+		width: 70%;
+	}
+
+	.events-swiper {
+		width: 100%;
+	}
+
+	#t1 {
+		font-size: 18px;
+	}
+
+	#style1 {
+		font-size: 18px;
+	}
+
+	#t3 {
+		font-size: 18px;
+	}
+
+	h4 {
+		font-size: 17px;
+	}
+
+	.texte {
+		font-size: 14px;
+	}
+
+	#aero {
+		font-size: 14px;
+		padding-top: 10px;
+		margin-left: 0px !important;
+	}
+
+	#local {
+		font-size: 14px;
+	}
+
+	#mailo {
+		font-size: 14px;
+	}
+
+	#num {
+		font-size: 14px;
+	}
+
+	.bg-b {
+		width: 28px;
+		height: 28px;
+	}
+
+	.bg-w {
+		width: 32px;
+		height: 32px;
+	}
+
+	.bg-b img {
+		height: 18px;
+	}
+
+}
+
+@media only screen and (max-width: 396px) {
+	.our-activities > div > article > div > div > div {
+		width: 100px;
+		height: 100px;
+	}
+
+	#t1 {
+		font-size: 17px;
+	}
+
+	#style1 {
+		font-size: 17px;
+	}
+
+	#t3 {
+		font-size: 17px;
+	}
+
+	#aero {
+		margin-right: 0px;
+	}
+
+	h4 {
+		font-size: 15px;
+	}
+
+	.texte {
+		font-size: 13px;
+	}
+
+	#tarif{
+		background-image: url('../images/pexels-asad-photo-maldives-2245287\ 10.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 100px;
+	}
+}
