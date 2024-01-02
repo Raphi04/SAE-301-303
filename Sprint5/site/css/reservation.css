@@ -1,0 +1,149 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#bigContainer{
+    background-image: url('../images/Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.input{
+    border:none;
+    border-bottom: solid 1px;
+}
+label{
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+span{
+    color: red;
+}
+#bg-blanc{
+    max-height: 468px;
+    width: 100%;
+    border-radius: 25px;
+}
+h3{
+    font-size: 22px;
+    color:  #3874CB;
+    font-weight: 600px;
+}
+
+.espace{
+    width: 55%;
+}
+#espace1{
+    width: 25%;
+}
+#espace2{
+    width: 50%;
+}
+#button{
+    background-color: #3874CB;
+    border: none;
+    border-radius: 9px;
+    height: 40px;
+    width: 102px;
+    transition-duration: 0.1s;
+    transition-property: 0.1s ease;
+}
+#button:hover{
+    transform: scale(1.05);
+}
+footer{
+    background-color: #3874CB;
+}
+@media screen and (max-width:576px){
+    #bg-blanc{
+        max-height: 616px;
+        width: 70%;
+    }
+    #mod1{
+        flex-direction: column !important;
+    }
+    #mod2{
+        flex-direction: column !important;
+    }
+    #mod3{
+        flex-direction: column !important;
+    }
+    #mod4{
+        flex-direction: column !important;
+    }
+    .espace{
+        width: 75%;
+    }
+    #espace1{
+        width: 60%;
+    }
+    #espace2{
+        width: 70%;
+    }
+    label{
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    select{
+        font-size: 15px;
+    }
+    #dateR{
+        font-size: 15px;
+    }
+    #toto{
+        padding-top: 15px !important;
+    }
+    #qcontainer{
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    
+    }
+    h3{
+        font-size: 18px;
+        text-align: center;
+        padding-left: 0px !important;
+    }
+}
+@media screen and (max-width:413px){
+    .espace{
+        width: 105%;
+    }
+    #espace1{
+        width: 100%;
+    }
+    #espace2{
+        width: 100%;
+    }
+    label{
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    select{
+        font-size: 15px;
+    }
+    #dateR{
+        font-size: 15px;
+    }
+    #toto{
+        padding-top: 15px !important;
+    }
+    #tata1{
+        flex-direction: column !important;
+    }
+    #tata2{
+        flex-direction: column !important;
+    }
+    #tata1 label{
+        margin-bottom: 5px !important;
+    }
+    #tata2 label{
+        margin-bottom: 5px !important;
+    }
+}
+@media screen and (max-width:397px){
+    .espace{
+        width: 120%;
+    }
+}
