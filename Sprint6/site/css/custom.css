@@ -523,14 +523,28 @@ header .navbar-collapse.collapse{
 	transform: scale(1.05);
 }
 
-.vehicule-image {
-	background-image: url("../images/course-3.jpg");
+#vehicule-image1 {
+	background-image: url("../images/troisAutogires.jpg");
+	background-size: cover;
+	background-position: center center;
+	border-radius: 20px 20px 0px 0px;
+	padding-bottom: 250px;
+	height: 40%;
+}
+#vehicule-image2 {
+	background-image: url("../images/pexels-jonathan-moore-239194.jpg");
+	background-size: cover;
+	background-position: start center;
+	border-radius: 20px 20px 0px 0px;
+	padding-bottom: 250px;
+}
+#vehicule-image3 {
+	background-image: url("../images/pendulaire1.jpg");
 	background-size: cover;
 	background-position: center center;
 	border-radius: 20px 20px 0px 0px;
 	padding-bottom: 250px;
 }
-
 .vehicule-name {
 	background-color: #3874CB;
 	border-radius: 0px 30px 30px 0px;
