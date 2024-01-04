@@ -40,7 +40,23 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
             setcookie("telephone", $_POST["telephone"], time() + (1 * 60 * 60 * 24 * 365));
         }
     }
-}
+    $setReservation = "INSERT INTO reservation (mail, dateReserv, type, statut) VALUES (:email, :date, :type, 'Attente')";
+    $parameters = [
+        "email" => $_POST["email"],
+        "date" => $_POST["reservation"],
+        "type" => $_POST["type"],
+    ];
+    addToDB($setReservation, $parameters);
+
+    $to = $_POST["email"];
+    $subject = "Votre demande de réservation va être prise en compte";
+    $message = "coucou";
+    $from = "acf2l.gustave@gmail.com";
+    $headers="MIME-Version: 1.0" . "rn";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "rn".'X-Mailer: PHP/' . phpversion();
+    $headers .= 'From: '.$from."rn".'Reply-To: '.$from."rn";
+    mail($to, $subject, $message, $headers);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -50,7 +66,6 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
         <title>ACF2L - Réservation</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="../css/slicknav.css">
         <link rel="stylesheet" href="../css/font-awesome.min.css">
         <link href="../css/custom.css" rel="stylesheet" media="screen">
@@ -254,7 +269,6 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
         <script src="../js/bootstrap.min.js"></script>
 
         <!-- Swiper Carousel js file -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <!-- Slick Nav js file -->
         <script src="../js/jquery.slicknav.js"></script>
@@ -262,10 +276,7 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
         <!-- Main Custom js file -->
         <script src="../js/function.js"></script>
         <script src="../js/header.js"></script>
-        <script src="../js/loading.js"></script>
         <script src="../js/cookie.js"></script>
-        <script src="../js/abouts-us.js"></script>
-        <script src="../js/events-slider"></script>
     </body>
 </html>
 

@@ -1,0 +1,124 @@
+html, body {
+    font-family: Poppins;
+}
+
+header {
+    position: relative;
+    padding: 0px 100px;
+    height: 150px;
+    z-index: 1;
+    box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+}
+
+header .buttonContainer .button{
+    margin-left: 30px;
+    background-color: #3874CB;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+header .buttonContainer .button#traite{
+    background-color: #20C905;
+}
+
+header .buttonContainer .button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+header .buttonContainer input.recherche {
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-left: 30px;
+    border: 2px solid #3874CB;
+    color: #3874CB;
+    font-size: 16px;
+}
+
+header .buttonContainer input.recherche::placeholder {
+    color: #3874CB;
+}
+
+header .buttonContainer input.recherche:focus {
+    outline: none;
+    color: #3874CB;
+}
+
+header .buttonContainer .button.recherche {
+    margin-left: 0px;
+}
+
+header .buttonContainer .button:focus {
+    outline: none;
+}
+
+.contentContainer {
+    background-color: #E4E4E4;
+    height: calc(100% - 150px);
+}
+
+.contentContainer .list {
+    height: 90%;
+    overflow-y: scroll;
+    padding: 50px 0px;
+}
+
+.contentContainer .list .infoContainer {
+    min-height: 150px;
+    width: 80%;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.contentContainer .list .infoContainer:last-child {
+    margin: 0;
+}
+
+.contentContainer .list .infoContainer hr {
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+.contentContainer .list .infoContainer h3 {
+    font-size: 20px;
+}
+
+.contentContainer .list .infoContainer p {
+    margin: 0;
+}
+
+.contentContainer .list .infoContainer .borderRight {
+    border-right: 1px solid black;
+    padding: 30px 20px;
+    height: 100%;
+}
+
+.contentContainer .list .infoContainer .borderRight form button{
+    border: none;
+    padding: 10px 20px;
+    background-color: #3874CB;
+    color: white;
+}
+
+.contentContainer .pagination {
+    height: 10%;
+    box-shadow: -4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contentContainer .pagination div {
+    color: #3874CB;
+    font-size: 20px;
+}
