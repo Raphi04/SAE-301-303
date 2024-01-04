@@ -1,10 +1,14 @@
 #container-gauche{
     background-color: #3873cbd2;
+    height: 100%;
+    width: 100%;
 }
 body{
     background-image: url("../../images/pexels-lukas-1419923.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 .h3bis{
     font-weight: 600;
@@ -21,9 +25,9 @@ a:hover{
 }
 a>div{
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-    width: 350px;
-    height: 350px;
+    width: 25%;
+    height: 25%;
 }
 .imagee{
-    height: 150px;
+    height:15%;
 }
