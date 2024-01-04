@@ -27,7 +27,10 @@ html::-webkit-scrollbar-thumb {
 body{
 	font-size: 16px;
 }
-
+#mo{
+    width: 75%;
+    height: 625px;
+}
 img{
 	max-width: 100%;
 }
@@ -1087,6 +1090,7 @@ footer {
 	width: 55px;
 	height: 55px;
 }
+
 /************************************/
 /*****       Media Screens      *****/
 /************************************/
@@ -1498,6 +1502,9 @@ footer {
 }
 
 @media only screen and (max-width: 412px) {
+	#mo{
+		display: none;
+	}
 	.titleACF2L {
 		font-size: 45px;
 	}
