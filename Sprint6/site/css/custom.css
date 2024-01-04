@@ -1502,6 +1502,9 @@ footer {
 }
 
 @media only screen and (max-width: 412px) {
+	#mo{
+		display: none;
+	}
 	.titleACF2L {
 		font-size: 45px;
 	}
