@@ -39,15 +39,15 @@ if(!array_key_exists("logged", $_SESSION)) {
                     <div class="d-flex">
                         <div class="d-flex flex-column">
                             <a target="_blank" class="text-decoration-none" href="backofficePages/reservationList.php">
-                                <div class="d-flex flex-column bg-white m-5 p-5">
+                                <div class="blanc col-10 d-flex flex-column bg-white m-5 p-5">
                                     <h3 class="h3bis mb-4">Réservation</h3>
                                     <div class=" d-flex justify-content-center align-items-center">
-                                        <img class="imagee" src="../images/Google Calendar.png" alt="Calendrier de Réservation">
+                                        <img id="imae" src="../images/Google Calendar.png" alt="Calendrier de Réservation">
                                     </div>
                                 </div>
                             </a>
                             <a target="_blank" class="text-decoration-none" href="backofficePages/vehiculeList.php">
-                                <div class="d-flex flex-column bg-white m-5 p-5 ">
+                                <div class="blanc col-10 d-flex flex-column bg-white m-5 p-5 ">
                                     <h3 class="h3bis mb-4">Véhicule</h3>
                                     <div class=" d-flex justify-content-center align-items-center">
                                         <img class="imagee" src="../images/Airplane Take Off.png" alt="Icone ULM">
@@ -57,7 +57,7 @@ if(!array_key_exists("logged", $_SESSION)) {
                         </div>
                         <div class="d-flex flex-column">
                             <a target="_blank" class="text-decoration-none" href="backofficePages/adherentList.php">
-                                <div class="d-flex flex-column bg-white m-5 p-5">
+                                <div class="blanc col-10 d-flex flex-column bg-white m-5 p-5">
                                     <h3 class="h3bis mb-4">Adhérent</h3>
                                     <div class=" d-flex justify-content-center align-items-center">
                                         <img class="imagee" src="../images/User.png" alt="Icone Adhérent">
@@ -65,7 +65,7 @@ if(!array_key_exists("logged", $_SESSION)) {
                                 </div>
                             </a>
                             <a target="_blank" class="text-decoration-none" href="backofficePages/staffList.php">
-                                <div class="d-flex flex-column bg-white m-5 p-5">
+                                <div class="blanc col-10 d-flex flex-column bg-white m-5 p-5">
                                     <h3  class="h3bis mb-4">STAFF</h3>
                                     <div class=" d-flex justify-content-center align-items-center">
                                         <img class="imagee" src="../images/Male User.png" alt="Icone STAFF">
