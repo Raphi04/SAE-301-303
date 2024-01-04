@@ -1,23 +1,23 @@
-.contentContainer .list .infoContainer #numeroReservation{
+.contentContainer .list .infoContainer .numeroReservation{
     width: 15%;
 }
 
-.contentContainer .list .infoContainer #adresseMail{
+.contentContainer .list .infoContainer .adresseMail{
     width: 25%;
 }
 
-.contentContainer .list .infoContainer #dateReservation{
+.contentContainer .list .infoContainer .dateReservation{
     width: 20%;
 }
 
-.contentContainer .list .infoContainer #typeULM{
+.contentContainer .list .infoContainer .typeULM{
     width: 15%;
 }
 
-.contentContainer .list .infoContainer #statutReservation{
+.contentContainer .list .infoContainer .statutReservation{
     width: 25%;
 }
 
-.contentContainer .list .infoContainer #statutReservation .Traite{
+.contentContainer .list .infoContainer .statutReservation .Traité{
     background-color: #20C905;
 }

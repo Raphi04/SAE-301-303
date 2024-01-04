@@ -82,6 +82,11 @@ header .buttonContainer .button:focus {
     border-radius: 15px;
 }
 
+.contentContainer .list .infoContainer.notFound {
+    padding: 75px;
+    font-size: 25px;
+}
+
 .contentContainer .list .infoContainer:last-child {
     margin: 0;
 }
@@ -100,17 +105,32 @@ header .buttonContainer .button:focus {
     margin: 0;
 }
 
-.contentContainer .list .infoContainer .borderRight {
-    border-right: 1px solid black;
+.contentContainer .list .infoContainer .sections {
     padding: 30px 20px;
     height: 100%;
 }
 
-.contentContainer .list .infoContainer .borderRight form button{
+.contentContainer .list .infoContainer .sections.borderRight {
+    border-right: 1px solid black;
+}
+
+.contentContainer .list .infoContainer .sections form button{
     border: none;
     padding: 10px 20px;
     background-color: #3874CB;
+    border-radius: 30px;
     color: white;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.contentContainer .list .infoContainer .sections form button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.contentContainer .list .infoContainer .sections form button:focus{
+    outline: none;
 }
 
 .contentContainer .pagination {
@@ -118,7 +138,122 @@ header .buttonContainer .button:focus {
     box-shadow: -4px 0px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
-.contentContainer .pagination div {
-    color: #3874CB;
+.contentContainer .pagination form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #3874CB;
+    color: white;
+    width: 30px;
+    height: 30px;
     font-size: 20px;
+    margin: 0px 5px;
+    transition: transform 0.3s;
+}
+
+.contentContainer .pagination form button.currentPage {
+    background-color: #295391;
+}
+
+.contentContainer .pagination form button:focus{
+    outline: none;
+}
+
+.contentContainer .pagination form button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.popUpContainer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popUpContainer form {
+    width: 40%;
+    max-height: 70%;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.popUpContainer form p {
+    margin: 0;
+}
+
+.popUpContainer form h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+
+.popUpContainer form hr {
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+    border: 1px solid black;
+
+}
+
+.popUpContainer .popUpInfo {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popUpContainer .popUpInfo:last-child {
+    margin-bottom: 0px;
+}
+
+.popUpContainer .popUpInfo  h2{
+    font-size: 20px;
+    margin: 0px 0px 15px 0px;
+}
+
+.popUpContainer .popUpInfo div {
+    width: 48%;
+}
+
+.popUpContainer .popUpInfo select {
+    width: 60%;
+}
+
+.popUpContainer .popUpInfo div.solo {
+    width: 100%;
+}
+
+.popUpContainer .sendToDB {
+    position: relative;
+}
+
+.popUpContainer .sendToDB .sendDB {
+    margin: 25px 0px;
+    border: none;
+    color: white;
+    transition: transform 0.3s;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.3;
+}
+
+.popUpContainer .sendToDB .sendDB:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.popUpContainer .sendToDB .sendDB:focus {
+    outline: none;
+}
+
+.popUpContainer .sendToDB .sendDB.supprimer {
+    position: absolute;
+    left: 10%;
+    background-color: #D83A3A;
+}
+
+.popUpContainer .sendToDB .sendDB.valider {
+    background-color: #3874CB;
 }

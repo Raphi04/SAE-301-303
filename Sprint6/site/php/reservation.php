@@ -40,7 +40,7 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
             setcookie("telephone", $_POST["telephone"], time() + (1 * 60 * 60 * 24 * 365));
         }
     }
-    $setReservation = "INSERT INTO reservation (mail, dateReserv, type, statut) VALUES (:email, :date, :type, 'Attente')";
+    $setReservation = "INSERT INTO reservation (mail, dateReserv, type, statut) VALUES (:email, :date, :type, 'En attente')";
     $parameters = [
         "email" => $_POST["email"],
         "date" => $_POST["reservation"],
