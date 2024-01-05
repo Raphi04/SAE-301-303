@@ -175,7 +175,7 @@ $results = getInfoDB($getVehicule, "");
     </head>
     <body class="w-100 h-100">
         <header class="w-100 bg-white d-flex justify-content-between align-items-center">
-            <h1>Staff</h1>
+            <h1>Véhicules</h1>
             <div class="buttonContainer d-flex align-items-center">
                 <form class="m-0" action="vehiculeList.php" method="post">
                     <input type="hidden" name="filter" value="Pendulaire">
