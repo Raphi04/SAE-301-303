@@ -97,6 +97,32 @@ function generateOption($options) {
     }
 }
 
+function generateOptionMatricule() {
+    global $vehiculeFree;
+    global $errorInDB;
+
+    if ($errorInDB == 1) {
+        echo "<option value=\"impossible\">Impossible</option>";
+    } else {
+        foreach($vehiculeFree as $vehicule) {
+            echo "<option value=\"".$vehicule."\">".$vehicule."</option>";
+        }
+    }
+}
+
+function generateOptionPilote() {
+    global $piloteFreeWithName;
+    global $piloteFree;
+    global $errorInDB;
+
+    if ($errorInDB == 1) {
+        echo "<option value=\"impossible\">Impossible</option>";
+    } else {
+        foreach(array_combine($piloteFree, $piloteFreeWithName) as $piloteFree => $piloteFreeWithName) {
+            echo "<option value=\"".$piloteFree."\">".$piloteFreeWithName." - ".$piloteFree."</option>";
+        }
+    }
+}
 //////////////////
 ////// SQL //////
 ////////////////

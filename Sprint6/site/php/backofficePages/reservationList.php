@@ -1,11 +1,11 @@
 <?php
 session_start();
 if(!array_key_exists("logged", $_SESSION)) {
-    header("location:../admin.php");
+    header("location:../../admin.php");
     exit();
 }else {
     if($_SESSION["logged"] !== "true") {
-        header("location:../admin.php");
+        header("location:../../admin.php");
         exit();
     }
 }
@@ -20,13 +20,19 @@ if(array_key_exists("toDB", $_POST)) {
             "numReserv" => $_POST["numReserv"]
         ];
         addToDB($supressSQL, $parameters);
+        foreach ($_POST as $key => $value) {
+            $_POST[$key] = NULL;
+        }
     } else {
-        $modifSQL = "UPDATE reservation set matricule = :matricule, identifiant = :identifiant";
-        $parameters = [
-            "matricule" => $_POST["matricule"],
-            "identifiant" => $_POST["identifiant"],
-        ];
-        addToDB($supressSQL, $parameters);
+        if($_POST["errorDB"] == 0) {
+            $modifSQL = "UPDATE reservation set matricule = :matricule, identifiant = :identifiant, statut = \"Traité\" WHERE numReserv = :numReserv";
+            $parameters = [
+                "matricule" => $_POST["matricule"],
+                "identifiant" => $_POST["identifiant"],
+                "numReserv" => $_POST["numReserv"]
+            ];
+            addToDB($modifSQL, $parameters);
+        }
     }
 }
 
@@ -133,6 +139,8 @@ $results = getInfoDB($getReservation, "");
                 <?php
                 if(count($results) > 0) {
                     foreach($results as $reservation) {
+                        $dateExploded = explode("-", $reservation["dateReserv"]);
+                        $date = $dateExploded[2]."/".$dateExploded[1]."/".$dateExploded[0];
                         echo '
                         <article class="infoContainer bg-white d-flex align-items-center">
                             <div class="numeroReservation borderRight sections d-flex flex-column justify-content-between">
@@ -145,14 +153,14 @@ $results = getInfoDB($getReservation, "");
                             <div class="adresseMail borderRight sections d-flex flex-column justify-content-between">
                                 <h3>Adresse email</h3>
                                 <div>
-                                    <p>'.$reservation["mail"].'</p>
+                                    <p>'.$reservation["email"].'</p>
                                     <hr>
                                 </div>
                             </div>
                             <div class="dateReservation borderRight sections d-flex flex-column justify-content-between">
                                 <h3>Date de réservation</h3>
                                 <div>
-                                    <p>'.$reservation["dateReserv"].'</p>
+                                    <p>'.$date.'</p>
                                     <hr>
                                 </div>
                             </div>
@@ -168,11 +176,11 @@ $results = getInfoDB($getReservation, "");
                                 <div>
                                     <form method="post" action="reservationList.php">
                                         <input type="hidden" name="numReserv" value="'.$reservation["numReserv"].'">
-                                        <input type="hidden" name="email" value="'.$reservation["mail"].'">
+                                        <input type="hidden" name="email" value="'.$reservation["email"].'">
                                         <input type="hidden" name="dateReserv" value="'.$reservation["dateReserv"].'">
                                         <input type="hidden" name="type" value="'.$reservation["type"].'">
                                         <input type="hidden" name="statut" value="'.$reservation["statut"].'">
-                                        <button class="'.$reservation["statut"].'" type="subtmit" name="more">'.$reservation["statut"].'</button>
+                                        <button class="'.$reservation["statut"].'" type="submit" name="more">'.$reservation["statut"].'</button>
                                     </form>
                                 </div>
                             </div>
@@ -192,7 +200,7 @@ $results = getInfoDB($getReservation, "");
                 <?php
                     for ($i = 1; $i <= $pagesTotales; $i++) {
                         if(array_key_exists("filter", $_POST) && $_POST["filter"] !== "") {
-                            if($i = $pageCourante) {
+                            if($i == $pageCourante) {
                                 echo '
                                 <form method="post" action="reservationList.php">
                                     <input type="hidden" value="'.$i.'" name="pageCourante">
@@ -200,6 +208,7 @@ $results = getInfoDB($getReservation, "");
                                     <button class="currentPage" type="submit">'.$i.'</button>
                                 </form>
                                 ';
+                                
                             }else {
                                 echo '
                                 <form method="post" action="reservationList.php">
@@ -210,26 +219,120 @@ $results = getInfoDB($getReservation, "");
                                 ';
                             }
                         } else {
-                            echo '
-                            <form method="post" action="reservationList.php">
-                                <input type="hidden" value="'.$i.'" name="pageCourante">
-                                <button type="submit">'.$i.'</button>
-                            </form>
+                            if($i == $pageCourante) {
+                                echo '
+                                <form method="post" action="reservationList.php">
+                                    <input type="hidden" value="'.$i.'" name="pageCourante">
+                                    <button class="currentPage" type="submit">'.$i.'</button>
+                                </form>
                             ';
+                            } else {
+                                echo '
+                                <form method="post" action="reservationList.php">
+                                    <input type="hidden" value="'.$i.'" name="pageCourante">
+                                    <button type="submit">'.$i.'</button>
+                                </form>
+                                ';
+                            }
                         }
                     }
                 ?>
             </div>
         </section>
         <?php
-        if(array_key_exists("more", $_POST)) {
+        if(array_key_exists("more", $_POST) && $_POST["more"] !== NULL) {
             $dateExploded = explode("-", $_POST["dateReserv"]);
             $date = $dateExploded[2]."/".$dateExploded[1]."/".$dateExploded[0];
+            
+            //Get all pilote in DB with a certain reservation date
+            $getAllPiloteAtDate = "SELECT identifiant FROM reservation WHERE type=\"".$_POST["type"]."\" AND statut=\"Traité\" AND dateReserv=\"".$_POST["dateReserv"]."\";";
+            $results = getInfoDB($getAllPiloteAtDate, "");
+            $allPiloteAtDate = [];
+            foreach($results as $piloteID) {
+                array_push($allPiloteAtDate, $piloteID["identifiant"]);
+            }
+
+            //Get all pilote in DB with a certain type
+            $getAllPiloteCertainType = "SELECT identifiant FROM pilote WHERE type=\"".$_POST["type"]."\";";
+            $results = getInfoDB($getAllPiloteCertainType, "");
+            $allPiloteCertainType = [];
+            foreach($results as $piloteCertainType) {
+                array_push($allPiloteCertainType, $piloteCertainType["identifiant"]);
+            }
+
+            //Pilotes that are free
+            $piloteFree = [];
+            foreach($allPiloteCertainType as $piloteCertainType) {
+                if(!in_array($piloteCertainType, $allPiloteAtDate)) {
+                    array_push($piloteFree, $piloteCertainType);
+                }
+            }
+
+            //Pilotes that are free with name
+            $piloteFreeWithName = [];
+            foreach($piloteFree as $piloteID) {
+                $getNameSQL = "SELECT nom FROM staff WHERE identifiant=\"".$piloteID."\";";
+                $result = getInfoDB($getNameSQL, "");
+                array_push($piloteFreeWithName, $result[0]["nom"]);
+            }
+
+            //Get all véhicule in DB wisth a certain reservation date
+            $getAllVehiculeAtDate = "SELECT matricule FROM reservation WHERE type=\"".$_POST["type"]."\" AND statut=\"Traité\" AND dateReserv=\"".$_POST["dateReserv"]."\";";
+            $results = getInfoDB($getAllVehiculeAtDate, "");
+            $allVehiculeAtDate = [];
+            foreach($results as $vehiculeID) {
+                array_push($allVehiculeAtDate, $vehiculeID["matricule"]);
+            }
+            
+            //Get all véhicule in DB with a certain type
+            $getAllVehiculeCertainType = "SELECT matricule FROM vehicule WHERE type=\"".$_POST["type"]."\";";
+            $results = getInfoDB($getAllVehiculeCertainType, "");
+            $allVehiculeCertainType = [];
+            foreach($results as $vehiculeCertainType) {
+                array_push($allVehiculeCertainType, $vehiculeCertainType["matricule"]);
+            }
+            
+            //Vehicule that are free
+            $vehiculeFree = [];
+            foreach($allVehiculeCertainType as $vehiculeCertainType) {
+                if(!in_array($vehiculeCertainType, $allVehiculeAtDate)) {
+                    array_push($vehiculeFree, $vehiculeCertainType);
+                }
+            }
+
+            calculateDate();
+            $errorInDB;            
+
+            // Test if the reservation is possible
+            if (count($vehiculeFree) == 0 || count($piloteFree) == 0 || $_POST["dateReserv"] < $currentDate){
+                $errorInDB = 1;
+            } else {
+                $errorInDB = 0;
+            }
+
+            //If Traite and not En attente
+            $matricule;
+            $piloteID;
+            $piloteName;
+
+            if($_POST["statut"] == "Traité"){
+                $getMatriculeAndPilote = "SELECT matricule, identifiant FROM reservation WHERE numReserv=:numReserv";
+                $parameters = [
+                    "numReserv" => $_POST["numReserv"]
+                ];
+                $results = getInfoDB($getMatriculeAndPilote, $parameters);
+                $matricule = $results[0]["matricule"];
+                $piloteID = $results[0]["identifiant"];
+
+                $getPiloteName = "SELECT nom FROM staff WHERE identifiant=\"".$piloteID."\";";
+                $result = getInfoDB($getPiloteName, "");
+                $piloteName = $result[0]["nom"];
+            }
             ?>
-            <section class="popUpContainer d-flex justify-content-center align-items-center w-100">
-                <form class="d-flex flex-column align-items-center" method="post">
-                    <h2>Réservation N°<?php echo $_POST["numReserv"]?></h2>
-                    <hr>
+            <section id="popUp" class="popUpContainer d-flex justify-content-center align-items-center w-100">
+                <form class="d-flex flex-column align-items-center" method="post" action="reservationList.php">
+                    <img class="closePopUp" src="../../images/close.png" onClick="document.getElementById('popUp').classList.add('none');">
+                    <h2 class="w-100 text-center">Réservation N°<?php echo $_POST["numReserv"]?></h2>
                     <div class="popUpInfo d-flex justify-content-between align-items-center">
                         <div class="d-flex flex-column align-items-center">
                             <h2>Email de l'adhérent</h2>
@@ -243,17 +346,39 @@ $results = getInfoDB($getReservation, "");
                     <div class="popUpInfo d-flex justify-content-between align-items-center">
                         <div class="d-flex flex-column align-items-center">
                             <h2>Matricule du véhicule</h2>
-                            <select name="matricule">
-                                <option>coucou</option>
-                                <?php /* generateOptionMatricule(); */?>
-                            </select>
+                            <?php
+                            if($_POST["statut"] == "Traité") {
+                                ?>
+                                <select readonly name="matricule">
+                                    <option value="<?php echo $matricule; ?>"><?php echo $matricule ?></option>
+                                </select>
+                                <?php
+                            } else {
+                                ?>
+                                <select name="matricule">
+                                    <?php generateOptionMatricule(); ?>
+                                </select>
+                                <?php
+                            }
+                            ?>
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <h2>Pilote du véhicule</h2>
-                            <select name="pilote">
-                                <option>coucou</option>
-                                <?php /* generateOptionPilote(); */?>
-                            </select>
+                            <?php
+                            if($_POST["statut"] == "Traité") {
+                                ?>
+                                <select readonly="readonly" name="identifiant">
+                                    <option value="<?php echo $piloteID; ?>"><?php echo $piloteName ?></option>
+                                </select>
+                                <?php
+                            } else {
+                                ?>
+                                <select name="identifiant">
+                                    <?php generateOptionPilote(); ?>
+                                </select>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="popUpInfo m-0 d-flex justify-content-between align-items-center">
@@ -272,11 +397,25 @@ $results = getInfoDB($getReservation, "");
                             }
                         ?>
                         <button class="sendDB valider d-flex justify-content-center align-items-center" name="toDB" value="Valider">Valider</button>
+                        <?php
+                        if ($errorInDB == 1) {
+                            echo '<input type="hidden" name="numReserv" value="'.$_POST["numReserv"].'">';
+                            echo '<input type="hidden" name="email" value="'.$_POST["email"].'">';
+                            echo '<input type="hidden" name="dateReserv" value="'.$_POST["dateReserv"].'">';
+                            echo '<input type="hidden" name="type" value="'.$_POST["type"].'">';
+                            echo '<input type="hidden" name="statut" value="'.$_POST["statut"].'">';
+                            echo '<input type="hidden" name="more">';
+                            echo '<input type="hidden" name="errorDB" value="1">';
+                            echo '<p>La réservation est impossible.</p>';
+                        } else {
+                            echo '<input type="hidden" name="errorDB" value="0">';
+                        }
+                        ?>
                     </div>
                 </form>
             </section>
-            <?php
-        }
+        <?php
+         }
         ?>       
     </body>
 </htlm>
