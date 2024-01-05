@@ -1,0 +1,58 @@
+.contentContainer .list .infoContainer .identifiantStaff{
+    width: 15%;
+}
+
+.contentContainer .list .infoContainer .staffPrenom{
+    width: 20%;
+}
+
+.contentContainer .list .infoContainer .staffNom{
+    width: 20%;
+}
+
+.contentContainer .list .infoContainer .staffRole{
+    width: 20%;
+}
+
+.contentContainer .list .infoContainer .staffModify{
+    width: 25%;
+}
+
+.contentContainer .list {
+    height: 75% !important;
+}
+
+.contentContainer .ajout {
+    height: 15% !important;
+    border-bottom: 1px solid black;
+    box-shadow: -4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contentContainer .ajout button {
+    background-color: #3874CB;
+    border: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.3s;
+}
+
+.contentContainer .ajout button:focus {
+    outline: none;
+}
+
+.contentContainer .ajout button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.contentContainer .pagination {
+    height: 10% !important;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.popUpContainer .popUpInfo select {
+    width: 30%;
+}

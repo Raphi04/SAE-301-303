@@ -53,17 +53,21 @@ if(array_key_exists("toDB", $_POST)) {
         if (count($empty) > 0) {
             
             $errorInDB = 1;
-            $errorMessage = "Tous les champs doivent être rempli";
+            $errorMessage = "Les champs doivent être rempli";
             
         } elseif (in_array($_POST["email"], $emailInDB)) {
-            $errorInDB = 1;
-            $errorMessage = "Adresse email déjà attribué";
+            if($_POST["email"] == $_POST["emailOriginal"]) {
+                $errorInDB = 0;
+            }else {
+                $errorInDB = 1;
+                $errorMessage = "Adresse email déjà attribué";
+            }
             
         } else {
             $errorInDB = 0;
         }
 
-        if($_POST["errorDB"] == 0) {
+        if($errorInDB == 0) {
             $modifSQL = "UPDATE adherent set email = :email, prenom = :prenom, nom = :nom, telephone = :telephone WHERE email = :emailOriginal";
             $parameters = [
                 "email" => $_POST["email"],
@@ -209,7 +213,7 @@ $results = getInfoDB($getAdherent, "");
                 } else {
                     echo '
                     <article class="infoContainer notFound bg-white d-flex justify-content-center align-items-center">
-                        <p>Aucun(e) Adhérent(e) n\'a été trouvé(e).</p>
+                        <p>Aucun(e) adhérent(e) n\'a été trouvé(e).</p>
                     </article>
                     ';
                 }
@@ -267,10 +271,10 @@ $results = getInfoDB($getAdherent, "");
                         </div>
                     </div>
                     <div class="sendToDB d-flex w-100 justify-content-center align-items-center">
-                        <input type="hidden" name="emailOriginal" value="<?php echo $_POST["email"]?>">
+                        <input type="hidden" name="emailOriginal" value="<?php if(array_key_exists("emailOriginal", $_POST)) {echo $_POST["emailOriginal"];} else {echo $_POST["email"];}?>">
                         <input type="hidden" name="modify">
-                        <button class="sendDB supprimer d-flex justify-content-center align-items-center" name="toDB" value="Supprimer">Supprimer</button>
                         <button class="sendDB valider d-flex justify-content-center align-items-center" name="toDB" value="Valider">Valider</button>
+                        <button class="sendDB supprimer d-flex justify-content-center align-items-center" name="toDB" value="Supprimer">Supprimer</button>
                         <?php
                         if ($errorInDB == 1) {
                             echo '<input type="hidden" name="modify">';
