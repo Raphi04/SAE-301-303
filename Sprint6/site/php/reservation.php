@@ -40,7 +40,7 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
             setcookie("telephone", $_POST["telephone"], time() + (1 * 60 * 60 * 24 * 365));
         }
     }
-    $setReservation = "INSERT INTO reservation (email, dateReserv, type, statut) VALUES (:email, :date, :type, 'En attente')";
+    $setReservation = "INSERT INTO reservation (mail, dateReserv, type, statut) VALUES (:email, :date, :type, 'En attente')";
     $parameters = [
         "email" => $_POST["email"],
         "date" => $_POST["reservation"],
@@ -56,7 +56,8 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "rn".'X-Mailer: PHP/' . phpversion();
     $headers .= 'From: '.$from."rn".'Reply-To: '.$from."rn";
     mail($to, $subject, $message, $headers);
-    }*/
+    */
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
