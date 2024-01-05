@@ -114,7 +114,7 @@ $results = getInfoDB($getReservation, "");
         <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="../../css/backoffice/basics.css">
         <link rel="stylesheet" href="../../css/backoffice/reservation.css">
-        <link rel="icon" type="image/x-icon" href="../images/logo.png">
+        <link rel="icon" type="../../image/x-icon" href="../images/logo.png">
     </head>
     <body class="w-100 h-100">
         <header class="w-100 bg-white d-flex justify-content-between align-items-center">

@@ -244,13 +244,13 @@ $results = getInfoDB($getStaff, "");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Raphael CADETE, Hugo BAJOUE, Yanis WONG">
     
-        <title>ACF2L - Backoffice - Réservation</title>
+        <title>ACF2L - Backoffice - Staff</title>
 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="../../css/backoffice/basics.css">
         <link rel="stylesheet" href="../../css/backoffice/staff.css">
-        <link rel="icon" type="image/x-icon" href="../images/logo.png">
+        <link rel="icon" type="../../image/x-icon" href="../images/logo.png">
     </head>
     <body class="w-100 h-100">
         <header class="w-100 bg-white d-flex justify-content-between align-items-center">
@@ -346,7 +346,7 @@ $results = getInfoDB($getStaff, "");
             </div>
             <div class="bg-white ajout w-100 d-flex justify-content-center align-items-center">
                 <form class="m-0" action="staffList.php" method="post">
-                    <input type="hidden" value="ajout" name="more" value="ajout">
+                    <input type="hidden" name="more" value="ajout">
                     <button>Ajouter un employé</button>
                 </form>
             </div>

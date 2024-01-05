@@ -1,0 +1,50 @@
+.contentContainer .list .infoContainer .matriculeVehicule{
+    width: 35%;
+}
+
+.contentContainer .list .infoContainer .vehiculeType{
+    width: 35%;
+}
+
+.contentContainer .list .infoContainer .vehiculeModify{
+    width: 30%;
+}
+
+.contentContainer .list {
+    height: 75% !important;
+}
+
+.contentContainer .ajout {
+    height: 15% !important;
+    border-bottom: 1px solid black;
+    box-shadow: -4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contentContainer .ajout button {
+    background-color: #3874CB;
+    border: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.3s;
+}
+
+.contentContainer .ajout button:focus {
+    outline: none;
+}
+
+.contentContainer .ajout button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.contentContainer .pagination {
+    height: 10% !important;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.popUpContainer .popUpInfo select {
+    width: 30%;
+}
