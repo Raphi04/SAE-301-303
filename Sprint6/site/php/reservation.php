@@ -48,7 +48,7 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
     ];
     addToDB($setReservation, $parameters);
 
-    $to = $_POST["email"];
+    /*$to = $_POST["email"];
     $subject = "Votre demande de réservation va être prise en compte";
     $message = "coucou";
     $from = "acf2l.gustave@gmail.com";
@@ -56,7 +56,7 @@ if (array_key_exists("send", $_POST) && count($errors) == 0) {
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "rn".'X-Mailer: PHP/' . phpversion();
     $headers .= 'From: '.$from."rn".'Reply-To: '.$from."rn";
     mail($to, $subject, $message, $headers);
-    }
+    }*/
 ?>
 <!DOCTYPE html>
 <html lang="fr">
