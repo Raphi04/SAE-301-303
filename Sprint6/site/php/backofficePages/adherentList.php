@@ -64,7 +64,7 @@ if(array_key_exists("toDB", $_POST)) {
         }
 
         if($_POST["errorDB"] == 0) {
-            $modifSQL = "UPDATE CASCADE adherent set email = :email, prenom = :prenom, nom = :nom, telephone = :telephone WHERE email = :emailOriginal";
+            $modifSQL = "UPDATE adherent set email = :email, prenom = :prenom, nom = :nom, telephone = :telephone WHERE email = :emailOriginal";
             $parameters = [
                 "email" => $_POST["email"],
                 "prenom" => $_POST["prenom"],
