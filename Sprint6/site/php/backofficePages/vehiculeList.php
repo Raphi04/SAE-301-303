@@ -190,7 +190,7 @@ $results = getInfoDB($getVehicule, "");
                     <button class="button" type="submit">Axes</button>
                 </form>
                 <form class="m-0" action="vehiculeList.php" method="post">
-                    <input class="recherche" type="text" name="filter" placeholder="Recherche par ID">
+                    <input class="recherche" type="text" name="filter" placeholder="Recherche par Matricule">
                     <button class="button recherche" type="submit">Recherche</button>
                 </form>
             </div>
