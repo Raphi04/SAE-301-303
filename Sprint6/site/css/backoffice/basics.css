@@ -174,21 +174,38 @@ header .buttonContainer .button:focus {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.popUpContainer.none {
+    display: none !important;
+}
 .popUpContainer form {
     width: 40%;
     max-height: 70%;
     border-radius: 15px;
     background-color: white;
+    position: relative;
+}
+
+.popUpContainer form .closePopUp {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 20px;
+}
+
+.popUpContainer form .closePopUp:hover {
+    cursor: pointer;
 }
 
 .popUpContainer form p {
     margin: 0;
 }
 
-.popUpContainer form h2 {
+.popUpContainer form > h2 {
     font-size: 35px;
     font-weight: 600;
-    margin: 20px 0px;
+    padding: 20px 0px;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
 }
 
 .popUpContainer form hr {
@@ -201,10 +218,6 @@ header .buttonContainer .button:focus {
 .popUpContainer .popUpInfo {
     width: 100%;
     margin-bottom: 30px;
-}
-
-.popUpContainer .popUpInfo:last-child {
-    margin-bottom: 0px;
 }
 
 .popUpContainer .popUpInfo  h2{
@@ -226,6 +239,12 @@ header .buttonContainer .button:focus {
 
 .popUpContainer .sendToDB {
     position: relative;
+}
+
+.popUpContainer .sendToDB p{
+    position: absolute;
+    right: 10%;
+    color: red;
 }
 
 .popUpContainer .sendToDB .sendDB {

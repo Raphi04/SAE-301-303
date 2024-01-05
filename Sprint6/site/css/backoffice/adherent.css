@@ -1,0 +1,19 @@
+.contentContainer .list .infoContainer .emailAdherent{
+    width: 25%;
+}
+
+.contentContainer .list .infoContainer .adherentPrenom{
+    width: 20%;
+}
+
+.contentContainer .list .infoContainer .adherentNom{
+    width: 20%;
+}
+
+.contentContainer .list .infoContainer .adherentTelephone{
+    width: 10%;
+}
+
+.contentContainer .list .infoContainer .adherentModify{
+    width: 25%;
+}
