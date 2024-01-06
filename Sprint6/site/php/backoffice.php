@@ -66,7 +66,7 @@ if(!array_key_exists("logged", $_SESSION)) {
                             </a>
                             <a target="_blank" class="text-decoration-none" href="backofficePages/staffList.php">
                                 <div class="blanc col-10 d-flex flex-column bg-white m-5 p-5">
-                                    <h3  class="h3bis mb-4">STAFF</h3>
+                                    <h3  class="h3bis mb-4">Staff</h3>
                                     <div class=" d-flex justify-content-center align-items-center">
                                         <img class="imagee" src="../images/Male User.png" alt="Icone STAFF">
                                     </div>
