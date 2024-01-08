@@ -406,7 +406,9 @@ $results = getInfoDB($getReservation, "");
                             echo '<input type="hidden" name="statut" value="'.$_POST["statut"].'">';
                             echo '<input type="hidden" name="more">';
                             echo '<input type="hidden" name="errorDB" value="1">';
-                            echo '<p>La réservation est impossible.</p>';
+                            if($_POST["statut"] !== "Traité") {
+                                echo '<p>La réservation est impossible.</p>';
+                            }
                         } else {
                             echo '<input type="hidden" name="errorDB" value="0">';
                         }
