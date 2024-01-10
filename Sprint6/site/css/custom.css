@@ -293,7 +293,7 @@ header .navbar-collapse.collapse{
 	font-size: 20px;
 	border-radius: 30px;
 	color: white;
-	z-index: 99;
+	z-index: 1;
 	transition: transform 0.3s;
 }
 
